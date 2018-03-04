@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -39,7 +40,23 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this._lib_dbDataSet = new LibraryMngmt._lib_dbDataSet();
+            this.lib_booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lib_booksTableAdapter = new LibraryMngmt._lib_dbDataSetTableAdapters.lib_booksTableAdapter();
+            this.tableAdapterManager = new LibraryMngmt._lib_dbDataSetTableAdapters.TableAdapterManager();
+            this.lib_booksDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._lib_dbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lib_booksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lib_booksDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -249,12 +266,102 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // _lib_dbDataSet
+            // 
+            this._lib_dbDataSet.DataSetName = "_lib_dbDataSet";
+            this._lib_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lib_booksBindingSource
+            // 
+            this.lib_booksBindingSource.DataMember = "lib-books";
+            this.lib_booksBindingSource.DataSource = this._lib_dbDataSet;
+            // 
+            // lib_booksTableAdapter
+            // 
+            this.lib_booksTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.lib_adminTableAdapter = null;
+            this.tableAdapterManager.lib_booksTableAdapter = this.lib_booksTableAdapter;
+            this.tableAdapterManager.lib_studentsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = LibraryMngmt._lib_dbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // lib_booksDataGridView
+            // 
+            this.lib_booksDataGridView.AutoGenerateColumns = false;
+            this.lib_booksDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lib_booksDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.lib_booksDataGridView.DataSource = this.lib_booksBindingSource;
+            this.lib_booksDataGridView.Location = new System.Drawing.Point(12, 128);
+            this.lib_booksDataGridView.Name = "lib_booksDataGridView";
+            this.lib_booksDataGridView.Size = new System.Drawing.Size(514, 207);
+            this.lib_booksDataGridView.TabIndex = 107;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "book_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "book_id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "book_name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "book_name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "book_author";
+            this.dataGridViewTextBoxColumn3.HeaderText = "book_author";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "book_edition";
+            this.dataGridViewTextBoxColumn4.HeaderText = "book_edition";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "book_price";
+            this.dataGridViewTextBoxColumn5.HeaderText = "book_price";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "book_pages";
+            this.dataGridViewTextBoxColumn6.HeaderText = "book_pages";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "book_status";
+            this.dataGridViewTextBoxColumn7.HeaderText = "book_status";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "book_borrower";
+            this.dataGridViewTextBoxColumn8.HeaderText = "book_borrower";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(806, 584);
+            this.ClientSize = new System.Drawing.Size(826, 584);
+            this.Controls.Add(this.lib_booksDataGridView);
             this.Controls.Add(this.bunifuFlatButton3);
             this.Controls.Add(this.bunifuThinButton23);
             this.Controls.Add(this.bunifuFlatButton2);
@@ -269,7 +376,11 @@
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._lib_dbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lib_booksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lib_booksDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,5 +398,18 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private _lib_dbDataSet _lib_dbDataSet;
+        private System.Windows.Forms.BindingSource lib_booksBindingSource;
+        private _lib_dbDataSetTableAdapters.lib_booksTableAdapter lib_booksTableAdapter;
+        private _lib_dbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView lib_booksDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

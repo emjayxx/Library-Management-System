@@ -100,6 +100,11 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="_lib_dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_lib_dbDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="forgotpw.resx">
       <DependentUpon>forgotpw.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +148,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_lib_dbDataSet.xsc">
+      <DependentUpon>_lib_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_lib_dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_lib_dbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_lib_dbDataSet.xss">
+      <DependentUpon>_lib_dbDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -194,6 +210,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pwpink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib-db.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

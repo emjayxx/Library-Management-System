@@ -28,14 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewBook));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,7 +41,19 @@
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this._lib_dbDataSet = new LibraryMngmt._lib_dbDataSet();
+            this.lib_booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lib_booksTableAdapter = new LibraryMngmt._lib_dbDataSetTableAdapters.lib_booksTableAdapter();
+            this.tableAdapterManager = new LibraryMngmt._lib_dbDataSetTableAdapters.TableAdapterManager();
+            this.bookprice = new System.Windows.Forms.TextBox();
+            this.bookauthor = new System.Windows.Forms.TextBox();
+            this.bookedition = new System.Windows.Forms.TextBox();
+            this.bookname = new System.Windows.Forms.TextBox();
+            this.bookid = new System.Windows.Forms.TextBox();
+            this.bookpages = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._lib_dbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lib_booksBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,54 +66,6 @@
             this.label1.Size = new System.Drawing.Size(173, 48);
             this.label1.TabIndex = 65;
             this.label1.Text = "New Book";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(175, 314);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(256, 26);
-            this.textBox4.TabIndex = 78;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(175, 270);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(256, 26);
-            this.textBox5.TabIndex = 77;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(175, 226);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(256, 26);
-            this.textBox6.TabIndex = 76;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(175, 182);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(256, 26);
-            this.textBox3.TabIndex = 75;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(175, 138);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(256, 26);
-            this.textBox2.TabIndex = 74;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(175, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 26);
-            this.textBox1.TabIndex = 73;
             // 
             // label7
             // 
@@ -234,6 +193,7 @@
             this.bunifuThinButton23.Size = new System.Drawing.Size(121, 45);
             this.bunifuThinButton23.TabIndex = 84;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
             // 
             // bunifuThinButton21
             // 
@@ -261,21 +221,97 @@
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
+            // _lib_dbDataSet
+            // 
+            this._lib_dbDataSet.DataSetName = "_lib_dbDataSet";
+            this._lib_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lib_booksBindingSource
+            // 
+            this.lib_booksBindingSource.DataMember = "lib-books";
+            this.lib_booksBindingSource.DataSource = this._lib_dbDataSet;
+            // 
+            // lib_booksTableAdapter
+            // 
+            this.lib_booksTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.lib_adminTableAdapter = null;
+            this.tableAdapterManager.lib_booksTableAdapter = this.lib_booksTableAdapter;
+            this.tableAdapterManager.lib_studentsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = LibraryMngmt._lib_dbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // bookprice
+            // 
+            this.bookprice.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lib_booksBindingSource, "book_price", true));
+            this.bookprice.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookprice.Location = new System.Drawing.Point(156, 265);
+            this.bookprice.Name = "bookprice";
+            this.bookprice.Size = new System.Drawing.Size(256, 26);
+            this.bookprice.TabIndex = 110;
+            // 
+            // bookauthor
+            // 
+            this.bookauthor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lib_booksBindingSource, "book_author", true));
+            this.bookauthor.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookauthor.Location = new System.Drawing.Point(156, 221);
+            this.bookauthor.Name = "bookauthor";
+            this.bookauthor.Size = new System.Drawing.Size(256, 26);
+            this.bookauthor.TabIndex = 109;
+            // 
+            // bookedition
+            // 
+            this.bookedition.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lib_booksBindingSource, "book_edition", true));
+            this.bookedition.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookedition.Location = new System.Drawing.Point(156, 177);
+            this.bookedition.Name = "bookedition";
+            this.bookedition.Size = new System.Drawing.Size(256, 26);
+            this.bookedition.TabIndex = 108;
+            // 
+            // bookname
+            // 
+            this.bookname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lib_booksBindingSource, "book_name", true));
+            this.bookname.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookname.Location = new System.Drawing.Point(156, 133);
+            this.bookname.Name = "bookname";
+            this.bookname.Size = new System.Drawing.Size(256, 26);
+            this.bookname.TabIndex = 107;
+            // 
+            // bookid
+            // 
+            this.bookid.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lib_booksBindingSource, "book_id", true));
+            this.bookid.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookid.Location = new System.Drawing.Point(156, 89);
+            this.bookid.Name = "bookid";
+            this.bookid.Size = new System.Drawing.Size(256, 26);
+            this.bookid.TabIndex = 106;
+            // 
+            // bookpages
+            // 
+            this.bookpages.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lib_booksBindingSource, "book_pages", true));
+            this.bookpages.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookpages.Location = new System.Drawing.Point(156, 309);
+            this.bookpages.Name = "bookpages";
+            this.bookpages.Size = new System.Drawing.Size(256, 26);
+            this.bookpages.TabIndex = 111;
+            // 
             // NewBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(500, 420);
+            this.ClientSize = new System.Drawing.Size(498, 429);
+            this.Controls.Add(this.bookpages);
+            this.Controls.Add(this.bookprice);
+            this.Controls.Add(this.bookauthor);
+            this.Controls.Add(this.bookedition);
+            this.Controls.Add(this.bookname);
+            this.Controls.Add(this.bookid);
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.bunifuThinButton23);
             this.Controls.Add(this.bunifuThinButton22);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -288,7 +324,10 @@
             this.Name = "NewBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewBook";
+            this.Load += new System.EventHandler(this.NewBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._lib_dbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lib_booksBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,12 +337,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -313,5 +346,15 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private _lib_dbDataSet _lib_dbDataSet;
+        private System.Windows.Forms.BindingSource lib_booksBindingSource;
+        private _lib_dbDataSetTableAdapters.lib_booksTableAdapter lib_booksTableAdapter;
+        private _lib_dbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox bookprice;
+        private System.Windows.Forms.TextBox bookauthor;
+        private System.Windows.Forms.TextBox bookedition;
+        private System.Windows.Forms.TextBox bookname;
+        private System.Windows.Forms.TextBox bookid;
+        private System.Windows.Forms.TextBox bookpages;
     }
 }
