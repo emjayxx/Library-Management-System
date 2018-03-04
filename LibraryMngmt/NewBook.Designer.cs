@@ -49,7 +49,6 @@
             this.bookauthor = new System.Windows.Forms.TextBox();
             this.bookedition = new System.Windows.Forms.TextBox();
             this.bookname = new System.Windows.Forms.TextBox();
-            this.bookid = new System.Windows.Forms.TextBox();
             this.bookpages = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._lib_dbDataSet)).BeginInit();
@@ -279,15 +278,6 @@
             this.bookname.Size = new System.Drawing.Size(256, 26);
             this.bookname.TabIndex = 107;
             // 
-            // bookid
-            // 
-            this.bookid.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lib_booksBindingSource, "book_id", true));
-            this.bookid.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookid.Location = new System.Drawing.Point(156, 89);
-            this.bookid.Name = "bookid";
-            this.bookid.Size = new System.Drawing.Size(256, 26);
-            this.bookid.TabIndex = 106;
-            // 
             // bookpages
             // 
             this.bookpages.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lib_booksBindingSource, "book_pages", true));
@@ -308,7 +298,6 @@
             this.Controls.Add(this.bookauthor);
             this.Controls.Add(this.bookedition);
             this.Controls.Add(this.bookname);
-            this.Controls.Add(this.bookid);
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.bunifuThinButton23);
             this.Controls.Add(this.bunifuThinButton22);
@@ -354,7 +343,6 @@
         private System.Windows.Forms.TextBox bookauthor;
         private System.Windows.Forms.TextBox bookedition;
         private System.Windows.Forms.TextBox bookname;
-        private System.Windows.Forms.TextBox bookid;
         private System.Windows.Forms.TextBox bookpages;
     }
 }

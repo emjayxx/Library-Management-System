@@ -302,10 +302,10 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.lib_booksDataGridView.DataSource = this.lib_booksBindingSource;
-            this.lib_booksDataGridView.Location = new System.Drawing.Point(12, 128);
+            this.lib_booksDataGridView.Location = new System.Drawing.Point(21, 169);
             this.lib_booksDataGridView.Name = "lib_booksDataGridView";
-            this.lib_booksDataGridView.Size = new System.Drawing.Size(514, 207);
-            this.lib_booksDataGridView.TabIndex = 107;
+            this.lib_booksDataGridView.Size = new System.Drawing.Size(495, 220);
+            this.lib_booksDataGridView.TabIndex = 106;
             // 
             // dataGridViewTextBoxColumn1
             // 
