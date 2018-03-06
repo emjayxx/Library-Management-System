@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -44,19 +48,29 @@
             this.lib_booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lib_booksTableAdapter = new LibraryMngmt._lib_dbDataSetTableAdapters.lib_booksTableAdapter();
             this.tableAdapterManager = new LibraryMngmt._lib_dbDataSetTableAdapters.TableAdapterManager();
-            this.lib_booksDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lib_studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lib_studentsTableAdapter = new LibraryMngmt._lib_dbDataSetTableAdapters.lib_studentsTableAdapter();
+            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.bunifuCustomDataGrid2 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.bookidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.booknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookauthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookeditionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookpriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookpagesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.book_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookborrowerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studcourseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studyrlevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studguardianDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._lib_dbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lib_booksBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lib_booksDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lib_studentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -288,85 +302,209 @@
             this.tableAdapterManager.lib_studentsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = LibraryMngmt._lib_dbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // lib_booksDataGridView
+            // lib_studentsBindingSource
             // 
-            this.lib_booksDataGridView.AllowUserToAddRows = false;
-            this.lib_booksDataGridView.AllowUserToDeleteRows = false;
-            this.lib_booksDataGridView.AllowUserToOrderColumns = true;
-            this.lib_booksDataGridView.AllowUserToResizeColumns = false;
-            this.lib_booksDataGridView.AllowUserToResizeRows = false;
-            this.lib_booksDataGridView.AutoGenerateColumns = false;
-            this.lib_booksDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.lib_booksDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.lib_booksDataGridView.DataSource = this.lib_booksBindingSource;
-            this.lib_booksDataGridView.Location = new System.Drawing.Point(21, 169);
-            this.lib_booksDataGridView.Name = "lib_booksDataGridView";
-            this.lib_booksDataGridView.Size = new System.Drawing.Size(495, 220);
-            this.lib_booksDataGridView.TabIndex = 106;
+            this.lib_studentsBindingSource.DataMember = "lib-students";
+            this.lib_studentsBindingSource.DataSource = this._lib_dbDataSet;
             // 
-            // dataGridViewTextBoxColumn1
+            // lib_studentsTableAdapter
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "book_id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "book_id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.lib_studentsTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // bunifuCustomDataGrid1
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "book_name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "book_name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.bunifuCustomDataGrid1.AllowUserToAddRows = false;
+            this.bunifuCustomDataGrid1.AllowUserToDeleteRows = false;
+            this.bunifuCustomDataGrid1.AllowUserToOrderColumns = true;
+            this.bunifuCustomDataGrid1.AllowUserToResizeColumns = false;
+            this.bunifuCustomDataGrid1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.bunifuCustomDataGrid1.AutoGenerateColumns = false;
+            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bookidDataGridViewTextBoxColumn,
+            this.booknameDataGridViewTextBoxColumn,
+            this.bookauthorDataGridViewTextBoxColumn,
+            this.bookeditionDataGridViewTextBoxColumn,
+            this.bookpriceDataGridViewTextBoxColumn,
+            this.bookpagesDataGridViewTextBoxColumn,
+            this.book_status,
+            this.bookborrowerDataGridViewTextBoxColumn});
+            this.bunifuCustomDataGrid1.DataSource = this.lib_booksBindingSource;
+            this.bunifuCustomDataGrid1.DoubleBuffered = true;
+            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
+            this.bunifuCustomDataGrid1.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(12, 129);
+            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
+            this.bunifuCustomDataGrid1.ReadOnly = true;
+            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.bunifuCustomDataGrid1.RowHeadersVisible = false;
+            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(504, 262);
+            this.bunifuCustomDataGrid1.TabIndex = 107;
+            this.bunifuCustomDataGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn3
+            // bunifuCustomDataGrid2
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "book_author";
-            this.dataGridViewTextBoxColumn3.HeaderText = "book_author";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.bunifuCustomDataGrid2.AllowUserToAddRows = false;
+            this.bunifuCustomDataGrid2.AllowUserToDeleteRows = false;
+            this.bunifuCustomDataGrid2.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.bunifuCustomDataGrid2.AutoGenerateColumns = false;
+            this.bunifuCustomDataGrid2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.bunifuCustomDataGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bunifuCustomDataGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.bunifuCustomDataGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bunifuCustomDataGrid2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.studidDataGridViewTextBoxColumn,
+            this.studnameDataGridViewTextBoxColumn,
+            this.studcourseDataGridViewTextBoxColumn,
+            this.studyrlevelDataGridViewTextBoxColumn,
+            this.studguardianDataGridViewTextBoxColumn});
+            this.bunifuCustomDataGrid2.DataSource = this.lib_studentsBindingSource;
+            this.bunifuCustomDataGrid2.DoubleBuffered = true;
+            this.bunifuCustomDataGrid2.EnableHeadersVisualStyles = false;
+            this.bunifuCustomDataGrid2.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuCustomDataGrid2.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.bunifuCustomDataGrid2.Location = new System.Drawing.Point(12, 407);
+            this.bunifuCustomDataGrid2.Name = "bunifuCustomDataGrid2";
+            this.bunifuCustomDataGrid2.ReadOnly = true;
+            this.bunifuCustomDataGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.bunifuCustomDataGrid2.RowHeadersVisible = false;
+            this.bunifuCustomDataGrid2.Size = new System.Drawing.Size(437, 150);
+            this.bunifuCustomDataGrid2.TabIndex = 108;
             // 
-            // dataGridViewTextBoxColumn4
+            // bookidDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "book_edition";
-            this.dataGridViewTextBoxColumn4.HeaderText = "book_edition";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.bookidDataGridViewTextBoxColumn.DataPropertyName = "book_id";
+            this.bookidDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.bookidDataGridViewTextBoxColumn.Name = "bookidDataGridViewTextBoxColumn";
+            this.bookidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookidDataGridViewTextBoxColumn.Width = 25;
             // 
-            // dataGridViewTextBoxColumn5
+            // booknameDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "book_price";
-            this.dataGridViewTextBoxColumn5.HeaderText = "book_price";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.booknameDataGridViewTextBoxColumn.DataPropertyName = "book_name";
+            this.booknameDataGridViewTextBoxColumn.HeaderText = "Book Name";
+            this.booknameDataGridViewTextBoxColumn.Name = "booknameDataGridViewTextBoxColumn";
+            this.booknameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.booknameDataGridViewTextBoxColumn.Width = 150;
             // 
-            // dataGridViewTextBoxColumn6
+            // bookauthorDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "book_pages";
-            this.dataGridViewTextBoxColumn6.HeaderText = "book_pages";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.bookauthorDataGridViewTextBoxColumn.DataPropertyName = "book_author";
+            this.bookauthorDataGridViewTextBoxColumn.HeaderText = "Author";
+            this.bookauthorDataGridViewTextBoxColumn.Name = "bookauthorDataGridViewTextBoxColumn";
+            this.bookauthorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn7
+            // bookeditionDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "book_status";
-            this.dataGridViewTextBoxColumn7.HeaderText = "book_status";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.bookeditionDataGridViewTextBoxColumn.DataPropertyName = "book_edition";
+            this.bookeditionDataGridViewTextBoxColumn.HeaderText = "Ed";
+            this.bookeditionDataGridViewTextBoxColumn.Name = "bookeditionDataGridViewTextBoxColumn";
+            this.bookeditionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookeditionDataGridViewTextBoxColumn.Width = 30;
             // 
-            // dataGridViewTextBoxColumn8
+            // bookpriceDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "book_borrower";
-            this.dataGridViewTextBoxColumn8.HeaderText = "book_borrower";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.bookpriceDataGridViewTextBoxColumn.DataPropertyName = "book_price";
+            this.bookpriceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.bookpriceDataGridViewTextBoxColumn.Name = "bookpriceDataGridViewTextBoxColumn";
+            this.bookpriceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookpriceDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // bookpagesDataGridViewTextBoxColumn
+            // 
+            this.bookpagesDataGridViewTextBoxColumn.DataPropertyName = "book_pages";
+            this.bookpagesDataGridViewTextBoxColumn.HeaderText = "Page#";
+            this.bookpagesDataGridViewTextBoxColumn.Name = "bookpagesDataGridViewTextBoxColumn";
+            this.bookpagesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookpagesDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // book_status
+            // 
+            this.book_status.DataPropertyName = "book_status";
+            this.book_status.HeaderText = "Status";
+            this.book_status.Name = "book_status";
+            this.book_status.ReadOnly = true;
+            this.book_status.Width = 40;
+            // 
+            // bookborrowerDataGridViewTextBoxColumn
+            // 
+            this.bookborrowerDataGridViewTextBoxColumn.DataPropertyName = "book_borrower";
+            this.bookborrowerDataGridViewTextBoxColumn.HeaderText = "Borrower";
+            this.bookborrowerDataGridViewTextBoxColumn.Name = "bookborrowerDataGridViewTextBoxColumn";
+            this.bookborrowerDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookborrowerDataGridViewTextBoxColumn.Width = 45;
+            // 
+            // studidDataGridViewTextBoxColumn
+            // 
+            this.studidDataGridViewTextBoxColumn.DataPropertyName = "stud_id";
+            this.studidDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.studidDataGridViewTextBoxColumn.Name = "studidDataGridViewTextBoxColumn";
+            this.studidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.studidDataGridViewTextBoxColumn.Width = 30;
+            // 
+            // studnameDataGridViewTextBoxColumn
+            // 
+            this.studnameDataGridViewTextBoxColumn.DataPropertyName = "stud_name";
+            this.studnameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.studnameDataGridViewTextBoxColumn.Name = "studnameDataGridViewTextBoxColumn";
+            this.studnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.studnameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // studcourseDataGridViewTextBoxColumn
+            // 
+            this.studcourseDataGridViewTextBoxColumn.DataPropertyName = "stud_course";
+            this.studcourseDataGridViewTextBoxColumn.HeaderText = "Course";
+            this.studcourseDataGridViewTextBoxColumn.Name = "studcourseDataGridViewTextBoxColumn";
+            this.studcourseDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studyrlevelDataGridViewTextBoxColumn
+            // 
+            this.studyrlevelDataGridViewTextBoxColumn.DataPropertyName = "stud_yrlevel";
+            this.studyrlevelDataGridViewTextBoxColumn.HeaderText = "Year";
+            this.studyrlevelDataGridViewTextBoxColumn.Name = "studyrlevelDataGridViewTextBoxColumn";
+            this.studyrlevelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.studyrlevelDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // studguardianDataGridViewTextBoxColumn
+            // 
+            this.studguardianDataGridViewTextBoxColumn.DataPropertyName = "stud_guardian";
+            this.studguardianDataGridViewTextBoxColumn.HeaderText = "Guardian";
+            this.studguardianDataGridViewTextBoxColumn.Name = "studguardianDataGridViewTextBoxColumn";
+            this.studguardianDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(826, 584);
-            this.Controls.Add(this.lib_booksDataGridView);
+            this.ClientSize = new System.Drawing.Size(807, 569);
+            this.Controls.Add(this.bunifuCustomDataGrid2);
+            this.Controls.Add(this.bunifuCustomDataGrid1);
             this.Controls.Add(this.bunifuFlatButton3);
             this.Controls.Add(this.bunifuThinButton23);
             this.Controls.Add(this.bunifuFlatButton2);
@@ -385,7 +523,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._lib_dbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lib_booksBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lib_booksDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lib_studentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,14 +547,22 @@
         private System.Windows.Forms.BindingSource lib_booksBindingSource;
         private _lib_dbDataSetTableAdapters.lib_booksTableAdapter lib_booksTableAdapter;
         private _lib_dbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView lib_booksDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.BindingSource lib_studentsBindingSource;
+        private _lib_dbDataSetTableAdapters.lib_studentsTableAdapter lib_studentsTableAdapter;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn booknameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookauthorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookeditionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookpriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookpagesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn book_status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookborrowerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studcourseDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studyrlevelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studguardianDataGridViewTextBoxColumn;
     }
 }

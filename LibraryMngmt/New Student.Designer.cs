@@ -32,11 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(New_Student));
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.stuguardian = new System.Windows.Forms.TextBox();
+            this.stuyrlevel = new System.Windows.Forms.TextBox();
+            this.stucourse = new System.Windows.Forms.TextBox();
+            this.stuname = new System.Windows.Forms.TextBox();
+            this.lib_studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._lib_dbDataSet = new LibraryMngmt._lib_dbDataSet();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,13 +46,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this._lib_dbDataSet = new LibraryMngmt._lib_dbDataSet();
-            this.lib_studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lib_studentsTableAdapter = new LibraryMngmt._lib_dbDataSetTableAdapters.lib_studentsTableAdapter();
             this.tableAdapterManager = new LibraryMngmt._lib_dbDataSetTableAdapters.TableAdapterManager();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._lib_dbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lib_studentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._lib_dbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuThinButton23
@@ -78,6 +77,7 @@
             this.bunifuThinButton23.Size = new System.Drawing.Size(121, 45);
             this.bunifuThinButton23.TabIndex = 101;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
             // 
             // bunifuThinButton22
             // 
@@ -105,47 +105,48 @@
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
-            // textBox5
+            // stuguardian
             // 
-            this.textBox5.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(174, 270);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(256, 26);
-            this.textBox5.TabIndex = 98;
+            this.stuguardian.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuguardian.Location = new System.Drawing.Point(174, 270);
+            this.stuguardian.Name = "stuguardian";
+            this.stuguardian.Size = new System.Drawing.Size(256, 26);
+            this.stuguardian.TabIndex = 98;
             // 
-            // textBox6
+            // stuyrlevel
             // 
-            this.textBox6.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(174, 226);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(256, 26);
-            this.textBox6.TabIndex = 97;
+            this.stuyrlevel.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuyrlevel.Location = new System.Drawing.Point(174, 226);
+            this.stuyrlevel.Name = "stuyrlevel";
+            this.stuyrlevel.Size = new System.Drawing.Size(256, 26);
+            this.stuyrlevel.TabIndex = 97;
             // 
-            // textBox3
+            // stucourse
             // 
-            this.textBox3.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(174, 182);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(256, 26);
-            this.textBox3.TabIndex = 96;
+            this.stucourse.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stucourse.Location = new System.Drawing.Point(174, 182);
+            this.stucourse.Name = "stucourse";
+            this.stucourse.Size = new System.Drawing.Size(256, 26);
+            this.stucourse.TabIndex = 96;
             // 
-            // textBox2
+            // stuname
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lib_studentsBindingSource, "stud_name", true));
-            this.textBox2.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(174, 138);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(256, 26);
-            this.textBox2.TabIndex = 95;
+            this.stuname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lib_studentsBindingSource, "stud_name", true));
+            this.stuname.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuname.Location = new System.Drawing.Point(174, 138);
+            this.stuname.Name = "stuname";
+            this.stuname.Size = new System.Drawing.Size(256, 26);
+            this.stuname.TabIndex = 95;
             // 
-            // textBox1
+            // lib_studentsBindingSource
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lib_studentsBindingSource, "stud_id", true));
-            this.textBox1.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(174, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 26);
-            this.textBox1.TabIndex = 94;
+            this.lib_studentsBindingSource.DataMember = "lib-students";
+            this.lib_studentsBindingSource.DataSource = this._lib_dbDataSet;
+            // 
+            // _lib_dbDataSet
+            // 
+            this._lib_dbDataSet.DataSetName = "_lib_dbDataSet";
+            this._lib_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label6
             // 
@@ -251,16 +252,6 @@
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
-            // _lib_dbDataSet
-            // 
-            this._lib_dbDataSet.DataSetName = "_lib_dbDataSet";
-            this._lib_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lib_studentsBindingSource
-            // 
-            this.lib_studentsBindingSource.DataMember = "lib-students";
-            this.lib_studentsBindingSource.DataSource = this._lib_dbDataSet;
-            // 
             // lib_studentsTableAdapter
             // 
             this.lib_studentsTableAdapter.ClearBeforeFill = true;
@@ -282,11 +273,10 @@
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.bunifuThinButton23);
             this.Controls.Add(this.bunifuThinButton22);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.stuguardian);
+            this.Controls.Add(this.stuyrlevel);
+            this.Controls.Add(this.stucourse);
+            this.Controls.Add(this.stuname);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -299,9 +289,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New_Student";
             this.Load += new System.EventHandler(this.New_Student_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._lib_dbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lib_studentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._lib_dbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,11 +300,10 @@
         #endregion
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox stuguardian;
+        private System.Windows.Forms.TextBox stuyrlevel;
+        private System.Windows.Forms.TextBox stucourse;
+        private System.Windows.Forms.TextBox stuname;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
