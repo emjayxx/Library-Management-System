@@ -21,5 +21,13 @@ namespace LibraryMngmt
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            this.Hide();
+            home.ShowDialog();
+            this.Close();
+        }
     }
 }
