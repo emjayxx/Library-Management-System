@@ -58,7 +58,6 @@ namespace LibraryMngmt
         {
             // TODO: This line of code loads data into the '_lib_dbDataSet._lib_books' table. You can move, or remove it, as needed.
             this.lib_booksTableAdapter.Fill(this._lib_dbDataSet._lib_books);
-
         }
     }
 }

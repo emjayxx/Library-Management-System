@@ -290,6 +290,11 @@
             // 
             // lib_booksDataGridView
             // 
+            this.lib_booksDataGridView.AllowUserToAddRows = false;
+            this.lib_booksDataGridView.AllowUserToDeleteRows = false;
+            this.lib_booksDataGridView.AllowUserToOrderColumns = true;
+            this.lib_booksDataGridView.AllowUserToResizeColumns = false;
+            this.lib_booksDataGridView.AllowUserToResizeRows = false;
             this.lib_booksDataGridView.AutoGenerateColumns = false;
             this.lib_booksDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lib_booksDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
