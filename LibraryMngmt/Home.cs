@@ -59,6 +59,11 @@ namespace LibraryMngmt
 
         private void Home_Load(object sender, EventArgs e)
         {
+            this.bunifuCustomDataGrid1.Refresh();
+            this.bunifuCustomDataGrid2.Refresh();
+            this.bunifuCustomDataGrid1.Parent.Refresh();
+            this.bunifuCustomDataGrid2.Parent.Refresh();
+
             //Update
             this.lib_booksTableAdapter.Update(this._lib_dbDataSet._lib_books);
             this.lib_studentsTableAdapter.Update(this._lib_dbDataSet._lib_students);
@@ -66,11 +71,12 @@ namespace LibraryMngmt
             //Fill
             this.lib_studentsTableAdapter.Fill(this._lib_dbDataSet._lib_students);
             this.lib_booksTableAdapter.Fill(this._lib_dbDataSet._lib_books);
+
+            
         }
 
         private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void bunifuCustomDataGrid1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -91,6 +97,63 @@ namespace LibraryMngmt
             searchbox.Show();
             button5.Enabled = true;
         }
+
+        
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            borrow frm = new borrow();
+            frm.book_idLabel1.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[0].Value.ToString();
+            frm.book_nameTextBox.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[1].Value.ToString();
+            frm.book_authorTextBox.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[2].Value.ToString();
+            frm.book_editionTextBox.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[3].Value.ToString();
+            frm.book_priceTextBox.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[4].Value.ToString();
+            frm.book_pagesTextBox.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[5].Value.ToString();
+            this.Hide();
+
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            returnbook rtrn = new returnbook();
+            rtrn.book_idLabel1.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[0].Value.ToString();
+            rtrn.book_nameTextBox.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[1].Value.ToString();
+            rtrn.book_authorTextBox.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[2].Value.ToString();
+            rtrn.book_editionTextBox.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[3].Value.ToString();
+            rtrn.book_priceTextBox.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[4].Value.ToString();
+            rtrn.book_pagesTextBox.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[5].Value.ToString();
+            rtrn.label9.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[7].Value.ToString();
+            String studid = bunifuCustomDataGrid1.CurrentRow.Cells[7].Value.ToString();
+
+
+            conn.Open();
+            OleDbCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT `stud_name`, `stud_course`, `stud_yrlevel` FROM `lib-students` WHERE stud_id='" + studid + "'";
+            cmd.Parameters.AddWithValue("stud_name", rtrn.label10.Text);
+            cmd.Parameters.AddWithValue("stud_yrlevel", rtrn.label12.Text);
+            cmd.Parameters.AddWithValue("stud_course", rtrn.label11.Text);
+            cmd.ExecuteNonQuery();
+            this.Validate();
+
+
+            this.Hide();
+            rtrn.ShowDialog();
+            this.Close();
+        }
+
+        private void lib_booksBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+
     }
 }
 

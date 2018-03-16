@@ -136,6 +136,7 @@
             this.stuname.Name = "stuname";
             this.stuname.Size = new System.Drawing.Size(256, 26);
             this.stuname.TabIndex = 95;
+            this.stuname.TextChanged += new System.EventHandler(this.stuname_TextChanged);
             // 
             // lib_studentsBindingSource
             // 

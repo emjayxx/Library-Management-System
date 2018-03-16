@@ -65,9 +65,20 @@ namespace LibraryMngmt
             MessageBox.Show("New Student has been Added to Database");
 
             Home home = new Home();
+
+            /*Home.bunifuCustomDataGrid1.Update();
+            Home.bunifuCustomDataGrid1.Refresh();
+            Home.bunifuCustomDataGrid2.Update();
+            Home.bunifuCustomDataGrid2.Refresh();*/
+
             this.Hide();
             home.ShowDialog();
             this.Close();
+        }
+
+        private void stuname_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

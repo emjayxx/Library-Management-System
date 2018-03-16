@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="borrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="borrow.Designer.cs">
+      <DependentUpon>borrow.cs</DependentUpon>
+    </Compile>
     <Compile Include="forgotpw.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,12 @@
     <Compile Include="Return.Designer.cs">
       <DependentUpon>Return.cs</DependentUpon>
     </Compile>
+    <Compile Include="returnbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="returnbook.Designer.cs">
+      <DependentUpon>returnbook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Signup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +120,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_lib_dbDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="borrow.resx">
+      <DependentUpon>borrow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forgotpw.resx">
       <DependentUpon>forgotpw.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +153,9 @@
     </Compile>
     <EmbeddedResource Include="Return.resx">
       <DependentUpon>Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="returnbook.resx">
+      <DependentUpon>returnbook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
