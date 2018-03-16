@@ -25,16 +25,6 @@ namespace LibraryMngmt
 
         private void Returnbook_Load(object sender, EventArgs e)
         {
-            String studid = label9.Text;
-
-            conn.Open();
-            OleDbCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "SELECT `stud_name`, `stud_course`, `stud_yrlevel` FROM `lib-students` WHERE stud_id='" + studid + "'";
-            cmd.Parameters.AddWithValue("stud_name", label10.Text);
-            cmd.Parameters.AddWithValue("stud_yrlevel", label12.Text);
-            cmd.Parameters.AddWithValue("stud_course", label11.Text);
-            cmd.ExecuteNonQuery();
-            this.Validate();
         }
 
         private void book_editionTextBox_TextChanged(object sender, EventArgs e)

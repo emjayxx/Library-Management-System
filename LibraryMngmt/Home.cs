@@ -60,11 +60,6 @@ namespace LibraryMngmt
 
         private void Home_Load(object sender, EventArgs e)
         {
-            this.bunifuCustomDataGrid1.Refresh();
-            this.bunifuCustomDataGrid2.Refresh();
-            this.bunifuCustomDataGrid1.Parent.Refresh();
-            this.bunifuCustomDataGrid2.Parent.Refresh();
-
             //Update
             this.lib_booksTableAdapter.Update(this._lib_dbDataSet._lib_books);
             this.lib_studentsTableAdapter.Update(this._lib_dbDataSet._lib_students);
@@ -73,22 +68,36 @@ namespace LibraryMngmt
             this.lib_studentsTableAdapter.Fill(this._lib_dbDataSet._lib_students);
             this.lib_booksTableAdapter.Fill(this._lib_dbDataSet._lib_books);
 
-            
+            //Sort
+            bunifuCustomDataGrid1.Sort(bunifuCustomDataGrid1.Columns[1], ListSortDirection.Ascending);
+            bunifuCustomDataGrid2.Sort(bunifuCustomDataGrid2.Columns[0], ListSortDirection.Ascending);
+
         }
 
         private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             String borrow_id = this.bunifuCustomDataGrid1.CurrentRow.Cells[7].Value.ToString();
 
-            if(!borrow_id.Equals("0"))
+            if(borrow_id != "0")
             {
-                conn.Open();
-                OleDbCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "SELECT stud_name FROM `lib-students` WHERE stud_id = '" + borrow_id + "'";
-                cmd.ExecuteNonQuery();
+                using (OleDbCommand Command = new OleDbCommand("SELECT * FROM `lib-students` WHERE stud_id = " + borrow_id + "", conn))
+                {
+                    conn.Open();
+                    OleDbDataReader DB_Reader = Command.ExecuteReader();
 
-                OleDbDataReader reader = cmd.ExecuteReader();
-                studentnamelabel.Text = reader.ToString();
+                    if (DB_Reader.Read())
+                    {
+                        studentnamelabel.Text = DB_Reader["stud_name"].ToString();
+                    } else
+                    {
+                        studentnamelabel.Text = "None";
+                    }
+                    DB_Reader.Close();
+                    conn.Close();
+                }
+            } else
+            {
+                studentnamelabel.Text = "None";
             }
         }
 
@@ -127,10 +136,21 @@ namespace LibraryMngmt
             frm.book_editionTextBox.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[3].Value.ToString();
             frm.book_priceTextBox.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[4].Value.ToString();
             frm.book_pagesTextBox.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[5].Value.ToString();
-            this.Hide();
+            String select = bunifuCustomDataGrid1.CurrentRow.Cells[0].Value.ToString();
 
-            frm.ShowDialog();
-            this.Close();
+
+                if (bunifuCustomDataGrid1.CurrentRow.Cells[6].Value.ToString() == "in")
+                {
+                    this.Hide();
+
+                    frm.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("This book is already borrowed.");
+                }
+
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
@@ -145,20 +165,34 @@ namespace LibraryMngmt
             rtrn.label9.Text = this.bunifuCustomDataGrid1.CurrentRow.Cells[7].Value.ToString();
             String studid = bunifuCustomDataGrid1.CurrentRow.Cells[7].Value.ToString();
 
+            if (studid != null) {
+                if (bunifuCustomDataGrid1.CurrentRow.Cells[6].Value.ToString() == "out") {
 
-            conn.Open();
-            OleDbCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "SELECT `stud_name`, `stud_course`, `stud_yrlevel` FROM `lib-students` WHERE stud_id='" + studid + "'";
+                    using (OleDbCommand Command = new OleDbCommand("SELECT * FROM `lib-students` WHERE stud_id = " + studid + "", conn))
+                    {
+                        conn.Open();
+                        OleDbDataReader DB_Reader = Command.ExecuteReader();
 
-            /*rtrn.label10.Text = Request.QueryString["user_id"].ToString();*/
+                        if (DB_Reader.Read())
+                        {
+                            rtrn.label10.Text = DB_Reader["stud_name"].ToString();
+                            rtrn.label11.Text = DB_Reader["stud_course"].ToString();
+                            rtrn.label12.Text = DB_Reader["stud_yrlevel"].ToString();
 
-            cmd.ExecuteNonQuery();
-            this.Validate();
+                        } DB_Reader.Close();
+                    }
 
-
-            this.Hide();
-            rtrn.ShowDialog();
-            this.Close();
+                    this.Hide();
+                    rtrn.ShowDialog();
+                    this.Close();
+                } else
+                {
+                    MessageBox.Show("This book is in the inventory.");
+                }
+            } else
+            {
+                MessageBox.Show("Please select a book to borrow.");
+            }
         }
 
         private void lib_booksBindingSource_CurrentChanged(object sender, EventArgs e)
@@ -182,7 +216,7 @@ namespace LibraryMngmt
             OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
             da.Fill(dt);
             bunifuCustomDataGrid1.DataSource = dt;
-
+            bunifuCustomDataGrid1.Sort(bunifuCustomDataGrid1.Columns[1], ListSortDirection.Ascending);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -192,6 +226,7 @@ namespace LibraryMngmt
             OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
             da.Fill(dt);
             bunifuCustomDataGrid2.DataSource = dt;
+            bunifuCustomDataGrid2.Sort(bunifuCustomDataGrid2.Columns[0], ListSortDirection.Ascending);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -209,9 +244,9 @@ namespace LibraryMngmt
                 bunifuCustomDataGrid1.DataSource = dt;
 
                 string fresh = "SELECT * FROM `lib-books`";
-                OleDbDataAdapter de = new OleDbDataAdapter(fresh, conn);
-                de.Fill(dt);
-                bunifuCustomDataGrid1.DataSource = dt;
+                OleDbDataAdapter freshie = new OleDbDataAdapter(fresh, conn);
+                freshie.Fill(dt);
+                bunifuCustomDataGrid1.DataSource = fresh;
             }
         }
 
@@ -229,9 +264,9 @@ namespace LibraryMngmt
                 bunifuCustomDataGrid2.DataSource = dt;
 
                 string fresh = "SELECT * FROM `lib-students`";
-                OleDbDataAdapter de = new OleDbDataAdapter(fresh, conn);
-                da.Fill(dt);
-                bunifuCustomDataGrid2.DataSource = dt;
+                OleDbDataAdapter freshie = new OleDbDataAdapter(fresh, conn);
+                freshie.Fill(dt);
+                bunifuCustomDataGrid2.DataSource = fresh;
             }
         }
 
