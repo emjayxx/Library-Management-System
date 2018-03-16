@@ -60,16 +60,16 @@ namespace LibraryMngmt
             cmd.Parameters.AddWithValue("@stud_guardian", this.stuguardian.Text);
             cmd.Parameters.AddWithValue("@stud_yrlevel", this.stuyrlevel.Text);
             cmd.Parameters.AddWithValue("@stud_course", this.stucourse.Text);
+            
             cmd.ExecuteNonQuery();
             this.Validate();
             MessageBox.Show("New Student has been Added to Database");
 
-            Home home = new Home();
 
-            /*Home.bunifuCustomDataGrid1.Update();
-            Home.bunifuCustomDataGrid1.Refresh();
-            Home.bunifuCustomDataGrid2.Update();
-            Home.bunifuCustomDataGrid2.Refresh();*/
+            Home home = new Home();
+            home.bunifuCustomDataGrid1.Refresh();
+            home.bunifuCustomDataGrid2.Refresh();
+
 
             this.Hide();
             home.ShowDialog();

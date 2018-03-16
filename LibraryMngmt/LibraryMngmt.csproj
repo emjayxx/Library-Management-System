@@ -236,6 +236,8 @@
     <Content Include="lib-db.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\refreshpink.png" />
+    <None Include="Resources\deletepink.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -83,6 +83,16 @@ namespace LibraryMngmt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap deletepink {
+            get {
+                object obj = ResourceManager.GetObject("deletepink", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap forgotpw {
             get {
                 object obj = ResourceManager.GetObject("forgotpw", resourceCulture);
@@ -166,6 +176,16 @@ namespace LibraryMngmt.Properties {
         internal static System.Drawing.Bitmap records {
             get {
                 object obj = ResourceManager.GetObject("records", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refreshpink {
+            get {
+                object obj = ResourceManager.GetObject("refreshpink", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

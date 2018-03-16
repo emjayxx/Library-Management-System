@@ -121,8 +121,8 @@
   <data name="issuebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\issuebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="about" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\about.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="returnbook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\returnbook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="searchpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\searchpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,9 +133,6 @@
   <data name="studpink1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\studpink1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="forgotpw" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\forgotpw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="returnbookpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\returnbookpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,11 +142,11 @@
   <data name="newbookpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newbookpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="returnbook" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\returnbook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="issuebookpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\issuebookpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="books3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\books3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pwpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pwpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="studpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\studpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,13 +154,22 @@
   <data name="records" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\records.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="issuebookpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\issuebookpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="about" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="books3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\books3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forgotpw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forgotpw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="newbook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newbook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pwpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pwpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="deletepink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deletepink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refreshpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refreshpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
