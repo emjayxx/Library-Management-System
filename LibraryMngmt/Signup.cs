@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
+
 namespace LibraryMngmt
 {
     public partial class Signup : Form
@@ -42,16 +43,15 @@ namespace LibraryMngmt
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
             conn.Open();
-
             if (count >= 2)
-            {
-                conn.Open();
+            { 
                 OleDbCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "INSERT INTO `lib-admin` (`username`, `admin_name`, `admin_pword`, `secquestion`, `answer`) VALUES('" + uname.Text + "', '" + name.Text + "', '" + pword.Text + "', '" + secquestion.Text + "', '" + secanswer.Text + "' )";
+
+                cmd.CommandText = "INSERT INTO `lib-admin` (`username`, `admin_name`, `admin_pword`, `secquestion`, `answer`) VALUES('" + uname.Text + "', '" + name.Text + "', '" + pword.Text + "', '" + label3.Text + "', '" + secanswer.Text + "' )";
                 cmd.Parameters.AddWithValue("@username", this.uname.Text);
                 cmd.Parameters.AddWithValue("@admin_name", this.name.Text);
                 cmd.Parameters.AddWithValue("@admin_pword", this.pword.Text);
-                cmd.Parameters.AddWithValue("@secquestion", this.secquestion.Text);
+                cmd.Parameters.AddWithValue("@secquestion", this.label3.Text);
                 cmd.Parameters.AddWithValue("@answer", this.secanswer.Text);
 
                 cmd.ExecuteNonQuery();
@@ -74,6 +74,7 @@ namespace LibraryMngmt
         {
             if (pword.Text != null && confirmpw.Text != null)
             {
+
                 if (pword.Text == confirmpw.Text)
                 {
                     this.Refresh();
@@ -98,23 +99,12 @@ namespace LibraryMngmt
 
         private void pword_TextChanged(object sender, EventArgs e)
         {
-            if (pword.Text != null && confirmpw.Text != null)
+            if (pword.TextLength < 8)
             {
-                if (pword.Text == confirmpw.Text)
-                {
-                    this.Refresh();
-                    confirmpwlabel.Text = "Password confirmed.";
-                    confirmpwlabel.ForeColor = Color.DarkSeaGreen;
-                    count = count + 1;
-                }
-                else
-                {
-                    this.Refresh();
-                    confirmpwlabel.Text = "Please confirm password";
-                    confirmpwlabel.ForeColor = Color.Tomato;
-                }
-            }
-            else
+                this.Refresh();
+                confirmpwlabel.Text = "Password should be more than or equal to 8 characters";
+                confirmpwlabel.ForeColor = Color.Tomato;
+            } else
             {
                 this.Refresh();
                 confirmpwlabel.Text = "Please confirm password";
@@ -153,8 +143,34 @@ namespace LibraryMngmt
         private void Signup_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the '_lib_dbDataSet._lib_sec' table. You can move, or remove it, as needed.
-            this.lib_secTableAdapter.Fill(this._lib_dbDataSet._lib_sec);
+            //this.lib_secTableAdapter.Fill(this._lib_dbDataSet._lib_sec);
+            
+            conn.Open();
+            OleDbCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM `lib-sec`";
 
+            OleDbDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                secquestion.Items.Add(reader["secu_q"].ToString());
+            }
+            conn.Close();
+            
+        }
+
+        private void secquestion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String selected = this.secquestion.GetItemText(this.secquestion.SelectedItem);
+            conn.Open();
+            using (OleDbCommand cmd = new OleDbCommand("SELECT * FROM `lib-sec` WHERE secu_q = '" + selected + "' ", conn))
+            {
+                OleDbDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    label3.Text = read["sec_id"].ToString();
+                }
+            }
+            conn.Close();
         }
     }
 }

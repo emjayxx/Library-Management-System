@@ -47,7 +47,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.confirmpwlabel = new System.Windows.Forms.Label();
             this.usernamecheck = new System.Windows.Forms.Label();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.secquestion = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,15 +58,16 @@
             this.secanswer.Location = new System.Drawing.Point(257, 359);
             this.secanswer.Name = "secanswer";
             this.secanswer.Size = new System.Drawing.Size(256, 26);
-            this.secanswer.TabIndex = 126;
+            this.secanswer.TabIndex = 5;
             // 
             // pword
             // 
             this.pword.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pword.Location = new System.Drawing.Point(257, 195);
             this.pword.Name = "pword";
+            this.pword.PasswordChar = '*';
             this.pword.Size = new System.Drawing.Size(256, 26);
-            this.pword.TabIndex = 124;
+            this.pword.TabIndex = 2;
             this.pword.TextChanged += new System.EventHandler(this.pword_TextChanged);
             // 
             // name
@@ -74,7 +76,7 @@
             this.name.Location = new System.Drawing.Point(257, 151);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(256, 26);
-            this.name.TabIndex = 123;
+            this.name.TabIndex = 1;
             // 
             // uname
             // 
@@ -82,7 +84,7 @@
             this.uname.Location = new System.Drawing.Point(257, 89);
             this.uname.Name = "uname";
             this.uname.Size = new System.Drawing.Size(256, 26);
-            this.uname.TabIndex = 122;
+            this.uname.TabIndex = 0;
             this.uname.TextChanged += new System.EventHandler(this.uname_TextChanged);
             // 
             // label9
@@ -183,7 +185,7 @@
             this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuThinButton23.Name = "bunifuThinButton23";
             this.bunifuThinButton23.Size = new System.Drawing.Size(121, 45);
-            this.bunifuThinButton23.TabIndex = 128;
+            this.bunifuThinButton23.TabIndex = 6;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
             // 
@@ -244,8 +246,9 @@
             this.confirmpw.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmpw.Location = new System.Drawing.Point(257, 240);
             this.confirmpw.Name = "confirmpw";
+            this.confirmpw.PasswordChar = '*';
             this.confirmpw.Size = new System.Drawing.Size(256, 26);
-            this.confirmpw.TabIndex = 131;
+            this.confirmpw.TabIndex = 3;
             this.confirmpw.TextChanged += new System.EventHandler(this.confirmpw_TextChanged);
             // 
             // label2
@@ -262,11 +265,11 @@
             // confirmpwlabel
             // 
             this.confirmpwlabel.AutoSize = true;
-            this.confirmpwlabel.Font = new System.Drawing.Font("Raleway", 11F);
+            this.confirmpwlabel.Font = new System.Drawing.Font("Raleway", 8F);
             this.confirmpwlabel.ForeColor = System.Drawing.Color.Tomato;
             this.confirmpwlabel.Location = new System.Drawing.Point(254, 269);
             this.confirmpwlabel.Name = "confirmpwlabel";
-            this.confirmpwlabel.Size = new System.Drawing.Size(181, 18);
+            this.confirmpwlabel.Size = new System.Drawing.Size(135, 13);
             this.confirmpwlabel.TabIndex = 132;
             this.confirmpwlabel.Text = "Please confirm password";
             this.confirmpwlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -282,20 +285,28 @@
             this.usernamecheck.TabIndex = 133;
             this.usernamecheck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuDropdown1
+            // secquestion
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items = new string[0];
-            this.bunifuDropdown1.Location = new System.Drawing.Point(257, 310);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(256, 28);
-            this.bunifuDropdown1.TabIndex = 134;
+            this.secquestion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.secquestion.DropDownWidth = 350;
+            this.secquestion.Font = new System.Drawing.Font("Raleway", 12F);
+            this.secquestion.FormattingEnabled = true;
+            this.secquestion.Location = new System.Drawing.Point(257, 310);
+            this.secquestion.Name = "secquestion";
+            this.secquestion.Size = new System.Drawing.Size(256, 27);
+            this.secquestion.TabIndex = 4;
+            this.secquestion.SelectedIndexChanged += new System.EventHandler(this.secquestion_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Raleway", 8F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(228, 363);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(10, 13);
+            this.label3.TabIndex = 134;
+            this.label3.Text = " ";
             // 
             // Signup
             // 
@@ -303,7 +314,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(547, 455);
-            this.Controls.Add(this.bunifuDropdown1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.secquestion);
             this.Controls.Add(this.usernamecheck);
             this.Controls.Add(this.confirmpwlabel);
             this.Controls.Add(this.confirmpw);
@@ -351,6 +363,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label confirmpwlabel;
         private System.Windows.Forms.Label usernamecheck;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private System.Windows.Forms.ComboBox secquestion;
+        private System.Windows.Forms.Label label3;
     }
 }
