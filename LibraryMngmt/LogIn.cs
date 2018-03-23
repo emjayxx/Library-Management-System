@@ -45,9 +45,6 @@ namespace LibraryMngmt
 
                         if (DB_Reader.Read())
                         {
-                            String adminname = DB_Reader["admin_name"].ToString();
-                            MessageBox.Show("Login Successful. Welcome " + adminname + "!");
-
                             Home home = new Home();
                             this.Hide();
                             home.ShowDialog();
@@ -84,6 +81,19 @@ namespace LibraryMngmt
             this.Hide();
             sign.ShowDialog();
             this.Close();
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            forgotpw forgotpw = new forgotpw();
+            this.Hide();
+            forgotpw.ShowDialog();
+            this.Close();
+        }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
