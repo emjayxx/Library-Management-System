@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace LibraryMngmt
 {
     public partial class LogIn : Form
     {
+        //add connection to DB
+        OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ACER\Desktop\5th Year\2nd Sem\VB Net\LibraryMngmtSys(P)\Library-Management-System\LibraryMngmt\lib-db.accdb");
+
         public LogIn()
         {
             InitializeComponent();
@@ -26,7 +30,60 @@ namespace LibraryMngmt
 
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
+            int result = 0;
+            string cmdText = "SELECT COUNT(*) FROM `lib-admin` WHERE username = '" + uname.Text+"' AND admin_pword = '"+pword.Text+"' ";
+            using (OleDbCommand cmd = new OleDbCommand(cmdText, conn))
+            {
+                conn.Open();
+                result = (int)cmd.ExecuteScalar();
 
+                if (result > 0)
+                {
+                    using (OleDbCommand Command = new OleDbCommand("SELECT * FROM `lib-admin` WHERE username = '"+ uname.Text +"' ", conn))
+                    {
+                        OleDbDataReader DB_Reader = Command.ExecuteReader();
+
+                        if (DB_Reader.Read())
+                        {
+                            String adminname = DB_Reader["admin_name"].ToString();
+                            MessageBox.Show("Login Successful. Welcome " + adminname + "!");
+
+                            Home home = new Home();
+                            this.Hide();
+                            home.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Login Error.");
+
+                            uname.Text = String.Empty;
+                            pword.Text = String.Empty;
+                            uname.Focus();
+                        }
+                        DB_Reader.Close();
+                        conn.Close();
+                    }
+                }
+                else
+                {
+                    conn.Close();
+                    MessageBox.Show("Invalid log-in. Please try again.");
+                    uname.Text = String.Empty;
+                    pword.Text = String.Empty;
+                    uname.Focus();
+
+                }
+
+            }
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            Signup sign = new Signup();
+            this.Hide();
+            sign.ShowDialog();
+            this.Close();
         }
     }
 }
