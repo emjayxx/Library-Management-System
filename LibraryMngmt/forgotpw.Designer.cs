@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(forgotpw));
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.newpw = new System.Windows.Forms.TextBox();
+            this.secanswer = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
+            this.usersearch = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -41,53 +40,51 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuThinButton25 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.resetbtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.secquestion = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pwcorrect = new System.Windows.Forms.Label();
+            this.confirmcorrect = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox8
+            // newpw
             // 
-            this.textBox8.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(253, 265);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(163, 26);
-            this.textBox8.TabIndex = 141;
+            this.newpw.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newpw.Location = new System.Drawing.Point(253, 265);
+            this.newpw.Name = "newpw";
+            this.newpw.PasswordChar = '*';
+            this.newpw.Size = new System.Drawing.Size(256, 26);
+            this.newpw.TabIndex = 141;
+            this.newpw.TextChanged += new System.EventHandler(this.newpw_TextChanged);
             // 
-            // textBox9
+            // secanswer
             // 
-            this.textBox9.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(253, 221);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(256, 26);
-            this.textBox9.TabIndex = 140;
+            this.secanswer.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secanswer.Location = new System.Drawing.Point(253, 221);
+            this.secanswer.Name = "secanswer";
+            this.secanswer.Size = new System.Drawing.Size(256, 26);
+            this.secanswer.TabIndex = 140;
             // 
-            // textBox10
+            // name
             // 
-            this.textBox10.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(253, 177);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(256, 26);
-            this.textBox10.TabIndex = 139;
+            this.name.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.Location = new System.Drawing.Point(253, 133);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(256, 26);
+            this.name.TabIndex = 138;
             // 
-            // textBox11
+            // usersearch
             // 
-            this.textBox11.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(253, 133);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(256, 26);
-            this.textBox11.TabIndex = 138;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(253, 89);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(163, 26);
-            this.textBox12.TabIndex = 137;
+            this.usersearch.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usersearch.Location = new System.Drawing.Point(253, 89);
+            this.usersearch.Name = "usersearch";
+            this.usersearch.Size = new System.Drawing.Size(163, 26);
+            this.usersearch.TabIndex = 137;
             // 
             // label9
             // 
@@ -118,9 +115,9 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(18, 265);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(126, 29);
+            this.label11.Size = new System.Drawing.Size(196, 29);
             this.label11.TabIndex = 134;
-            this.label11.Text = "Password:";
+            this.label11.Text = "Password Reset:";
             // 
             // label12
             // 
@@ -179,31 +176,7 @@
             this.bunifuThinButton25.Size = new System.Drawing.Size(86, 39);
             this.bunifuThinButton25.TabIndex = 146;
             this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuThinButton24
-            // 
-            this.bunifuThinButton24.ActiveBorderThickness = 2;
-            this.bunifuThinButton24.ActiveCornerRadius = 10;
-            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.bunifuThinButton24.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuThinButton24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.bunifuThinButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton24.BackgroundImage")));
-            this.bunifuThinButton24.ButtonText = "Retrieve";
-            this.bunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton24.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.bunifuThinButton24.IdleBorderThickness = 2;
-            this.bunifuThinButton24.IdleCornerRadius = 10;
-            this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuThinButton24.Location = new System.Drawing.Point(423, 258);
-            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.bunifuThinButton24.Name = "bunifuThinButton24";
-            this.bunifuThinButton24.Size = new System.Drawing.Size(86, 39);
-            this.bunifuThinButton24.TabIndex = 145;
-            this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton25.Click += new System.EventHandler(this.bunifuThinButton25_Click);
             // 
             // bunifuThinButton21
             // 
@@ -229,31 +202,34 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(26, 32);
             this.bunifuThinButton21.TabIndex = 144;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
-            // bunifuThinButton23
+            // resetbtn
             // 
-            this.bunifuThinButton23.ActiveBorderThickness = 1;
-            this.bunifuThinButton23.ActiveCornerRadius = 30;
-            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuThinButton23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Sign Up";
-            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton23.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.bunifuThinButton23.IdleBorderThickness = 2;
-            this.bunifuThinButton23.IdleCornerRadius = 30;
-            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuThinButton23.Location = new System.Drawing.Point(253, 308);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(121, 45);
-            this.bunifuThinButton23.TabIndex = 143;
-            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.resetbtn.ActiveBorderThickness = 1;
+            this.resetbtn.ActiveCornerRadius = 30;
+            this.resetbtn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.resetbtn.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.resetbtn.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.resetbtn.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.resetbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.resetbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("resetbtn.BackgroundImage")));
+            this.resetbtn.ButtonText = "Reset";
+            this.resetbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.resetbtn.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.resetbtn.IdleBorderThickness = 2;
+            this.resetbtn.IdleCornerRadius = 30;
+            this.resetbtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.resetbtn.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.resetbtn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.resetbtn.Location = new System.Drawing.Point(253, 351);
+            this.resetbtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.resetbtn.Name = "resetbtn";
+            this.resetbtn.Size = new System.Drawing.Size(121, 45);
+            this.resetbtn.TabIndex = 143;
+            this.resetbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.resetbtn.Click += new System.EventHandler(this.resetbtn_Click);
             // 
             // bunifuThinButton22
             // 
@@ -273,12 +249,13 @@
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuThinButton22.Location = new System.Drawing.Point(388, 308);
+            this.bunifuThinButton22.Location = new System.Drawing.Point(388, 351);
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
             this.bunifuThinButton22.Size = new System.Drawing.Size(121, 45);
             this.bunifuThinButton22.TabIndex = 142;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
             // pictureBox3
             // 
@@ -290,22 +267,79 @@
             this.pictureBox3.TabIndex = 131;
             this.pictureBox3.TabStop = false;
             // 
+            // secquestion
+            // 
+            this.secquestion.AutoSize = true;
+            this.secquestion.Font = new System.Drawing.Font("Raleway", 12F);
+            this.secquestion.ForeColor = System.Drawing.Color.White;
+            this.secquestion.Location = new System.Drawing.Point(249, 184);
+            this.secquestion.Name = "secquestion";
+            this.secquestion.Size = new System.Drawing.Size(17, 19);
+            this.secquestion.TabIndex = 147;
+            this.secquestion.Text = "  ";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(253, 309);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.Size = new System.Drawing.Size(256, 26);
+            this.textBox1.TabIndex = 149;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Raleway", 18F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(18, 309);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(213, 29);
+            this.label2.TabIndex = 148;
+            this.label2.Text = "Confirm Password";
+            // 
+            // pwcorrect
+            // 
+            this.pwcorrect.AutoSize = true;
+            this.pwcorrect.Font = new System.Drawing.Font("Raleway", 12F);
+            this.pwcorrect.ForeColor = System.Drawing.Color.White;
+            this.pwcorrect.Location = new System.Drawing.Point(512, 273);
+            this.pwcorrect.Name = "pwcorrect";
+            this.pwcorrect.Size = new System.Drawing.Size(17, 19);
+            this.pwcorrect.TabIndex = 150;
+            this.pwcorrect.Text = "  ";
+            // 
+            // confirmcorrect
+            // 
+            this.confirmcorrect.AutoSize = true;
+            this.confirmcorrect.Font = new System.Drawing.Font("Raleway", 12F);
+            this.confirmcorrect.ForeColor = System.Drawing.Color.White;
+            this.confirmcorrect.Location = new System.Drawing.Point(512, 316);
+            this.confirmcorrect.Name = "confirmcorrect";
+            this.confirmcorrect.Size = new System.Drawing.Size(17, 19);
+            this.confirmcorrect.TabIndex = 151;
+            this.confirmcorrect.Text = "  ";
+            // 
             // forgotpw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(552, 369);
+            this.ClientSize = new System.Drawing.Size(552, 410);
+            this.Controls.Add(this.confirmcorrect);
+            this.Controls.Add(this.pwcorrect);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.secquestion);
             this.Controls.Add(this.bunifuThinButton25);
-            this.Controls.Add(this.bunifuThinButton24);
             this.Controls.Add(this.bunifuThinButton21);
-            this.Controls.Add(this.bunifuThinButton23);
+            this.Controls.Add(this.resetbtn);
             this.Controls.Add(this.bunifuThinButton22);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.newpw);
+            this.Controls.Add(this.secanswer);
+            this.Controls.Add(this.name);
+            this.Controls.Add(this.usersearch);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
@@ -326,13 +360,12 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
+        private Bunifu.Framework.UI.BunifuThinButton2 resetbtn;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox newpw;
+        private System.Windows.Forms.TextBox secanswer;
+        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.TextBox usersearch;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -340,7 +373,11 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton25;
+        private System.Windows.Forms.Label secquestion;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label pwcorrect;
+        private System.Windows.Forms.Label confirmcorrect;
     }
 }
