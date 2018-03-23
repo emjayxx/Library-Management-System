@@ -69,7 +69,7 @@ namespace LibraryMngmt
             this.lib_booksTableAdapter.Fill(this._lib_dbDataSet._lib_books);
 
             //Sort
-            bunifuCustomDataGrid1.Sort(bunifuCustomDataGrid1.Columns[1], ListSortDirection.Ascending);
+            bunifuCustomDataGrid1.Sort(bunifuCustomDataGrid1.Columns[0], ListSortDirection.Ascending);
             bunifuCustomDataGrid2.Sort(bunifuCustomDataGrid2.Columns[0], ListSortDirection.Ascending);
 
         }
@@ -87,18 +87,21 @@ namespace LibraryMngmt
 
                     if (DB_Reader.Read())
                     {
-                        this.Refresh();
                         studentnamelabel.Text = DB_Reader["stud_name"].ToString();
+                        DB_Reader.Close();
+                        conn.Close();
+
                     } else
                     {
-                        this.Refresh();
                         studentnamelabel.Text = "None";
+                        DB_Reader.Close();
+                        conn.Close();
                     }
-                    DB_Reader.Close();
-                    conn.Close();
+                    
                 }
             } else
             {
+                this.Refresh();
                 studentnamelabel.Text = "None";
             }
         }
@@ -287,6 +290,14 @@ namespace LibraryMngmt
 
         private void bunifuThinButton23_Click_1(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void logoutbutton_Click(object sender, EventArgs e)
+        {
+            LogIn login = new LogIn();
+            this.Hide();
+            login.ShowDialog();
             this.Close();
         }
     }

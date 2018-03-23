@@ -90,6 +90,7 @@ namespace LibraryMngmt
                 cmd.CommandText = "UPDATE `lib-books` SET book_borrower='" + studentid + "', book_status='out' WHERE book_name='" + book_nameTextBox.Text + "'";
                 cmd.ExecuteNonQuery();
                 this.Validate();
+                conn.Close();
 
                 MessageBox.Show("The Book: " + book_nameTextBox.Text + " has been Borrowed by " + studentname + ".");
 
@@ -97,6 +98,7 @@ namespace LibraryMngmt
                 this.Hide();
                 backhome.ShowDialog();
                 this.Close();
+                
             }
         }
     }
