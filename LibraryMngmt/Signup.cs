@@ -162,7 +162,7 @@ namespace LibraryMngmt
         {
             String selected = this.secquestion.GetItemText(this.secquestion.SelectedItem);
             conn.Open();
-            using (OleDbCommand cmd = new OleDbCommand("SELECT * FROM `lib-sec` WHERE secu_q = '" + selected + "' ", conn))
+            using (OleDbCommand cmd = new OleDbCommand("SELECT * FROM `lib-sec` WHERE secu_q = '" + selected.ToString() + "' ", conn))
             {
                 OleDbDataReader read = cmd.ExecuteReader();
                 while (read.Read())

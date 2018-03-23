@@ -74,7 +74,7 @@
             this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuThinButton23.Name = "bunifuThinButton23";
             this.bunifuThinButton23.Size = new System.Drawing.Size(121, 45);
-            this.bunifuThinButton23.TabIndex = 101;
+            this.bunifuThinButton23.TabIndex = 4;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
             // 
@@ -100,7 +100,7 @@
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
             this.bunifuThinButton22.Size = new System.Drawing.Size(121, 45);
-            this.bunifuThinButton22.TabIndex = 100;
+            this.bunifuThinButton22.TabIndex = 5;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
@@ -110,7 +110,7 @@
             this.stuguardian.Location = new System.Drawing.Point(171, 223);
             this.stuguardian.Name = "stuguardian";
             this.stuguardian.Size = new System.Drawing.Size(256, 26);
-            this.stuguardian.TabIndex = 98;
+            this.stuguardian.TabIndex = 3;
             // 
             // stuyrlevel
             // 
@@ -118,7 +118,7 @@
             this.stuyrlevel.Location = new System.Drawing.Point(171, 179);
             this.stuyrlevel.Name = "stuyrlevel";
             this.stuyrlevel.Size = new System.Drawing.Size(256, 26);
-            this.stuyrlevel.TabIndex = 97;
+            this.stuyrlevel.TabIndex = 2;
             // 
             // stucourse
             // 
@@ -126,7 +126,7 @@
             this.stucourse.Location = new System.Drawing.Point(171, 135);
             this.stucourse.Name = "stucourse";
             this.stucourse.Size = new System.Drawing.Size(256, 26);
-            this.stucourse.TabIndex = 96;
+            this.stucourse.TabIndex = 1;
             // 
             // stuname
             // 
@@ -135,7 +135,7 @@
             this.stuname.Location = new System.Drawing.Point(171, 91);
             this.stuname.Name = "stuname";
             this.stuname.Size = new System.Drawing.Size(256, 26);
-            this.stuname.TabIndex = 95;
+            this.stuname.TabIndex = 0;
             this.stuname.TextChanged += new System.EventHandler(this.stuname_TextChanged);
             // 
             // lib_studentsBindingSource
@@ -249,6 +249,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.lib_adminTableAdapter = null;
             this.tableAdapterManager.lib_booksTableAdapter = null;
+            this.tableAdapterManager.lib_secTableAdapter = null;
             this.tableAdapterManager.lib_studentsTableAdapter = this.lib_studentsTableAdapter;
             this.tableAdapterManager.UpdateOrder = LibraryMngmt._lib_dbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 

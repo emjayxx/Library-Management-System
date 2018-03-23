@@ -152,7 +152,7 @@
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
             this.bunifuThinButton22.Size = new System.Drawing.Size(121, 45);
-            this.bunifuThinButton22.TabIndex = 83;
+            this.bunifuThinButton22.TabIndex = 6;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
@@ -178,7 +178,7 @@
             this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuThinButton23.Name = "bunifuThinButton23";
             this.bunifuThinButton23.Size = new System.Drawing.Size(121, 45);
-            this.bunifuThinButton23.TabIndex = 84;
+            this.bunifuThinButton23.TabIndex = 5;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
             // 
@@ -227,6 +227,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.lib_adminTableAdapter = null;
             this.tableAdapterManager.lib_booksTableAdapter = this.lib_booksTableAdapter;
+            this.tableAdapterManager.lib_secTableAdapter = null;
             this.tableAdapterManager.lib_studentsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = LibraryMngmt._lib_dbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -237,7 +238,7 @@
             this.bookprice.Location = new System.Drawing.Point(145, 221);
             this.bookprice.Name = "bookprice";
             this.bookprice.Size = new System.Drawing.Size(256, 26);
-            this.bookprice.TabIndex = 110;
+            this.bookprice.TabIndex = 3;
             // 
             // bookauthor
             // 
@@ -246,7 +247,7 @@
             this.bookauthor.Location = new System.Drawing.Point(145, 177);
             this.bookauthor.Name = "bookauthor";
             this.bookauthor.Size = new System.Drawing.Size(256, 26);
-            this.bookauthor.TabIndex = 109;
+            this.bookauthor.TabIndex = 2;
             // 
             // bookedition
             // 
@@ -255,7 +256,7 @@
             this.bookedition.Location = new System.Drawing.Point(145, 133);
             this.bookedition.Name = "bookedition";
             this.bookedition.Size = new System.Drawing.Size(256, 26);
-            this.bookedition.TabIndex = 108;
+            this.bookedition.TabIndex = 1;
             // 
             // bookname
             // 
@@ -264,7 +265,7 @@
             this.bookname.Location = new System.Drawing.Point(145, 89);
             this.bookname.Name = "bookname";
             this.bookname.Size = new System.Drawing.Size(256, 26);
-            this.bookname.TabIndex = 107;
+            this.bookname.TabIndex = 0;
             // 
             // bookpages
             // 
@@ -273,7 +274,7 @@
             this.bookpages.Location = new System.Drawing.Point(145, 265);
             this.bookpages.Name = "bookpages";
             this.bookpages.Size = new System.Drawing.Size(256, 26);
-            this.bookpages.TabIndex = 111;
+            this.bookpages.TabIndex = 4;
             // 
             // NewBook
             // 

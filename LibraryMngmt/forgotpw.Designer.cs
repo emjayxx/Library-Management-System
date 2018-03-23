@@ -59,7 +59,7 @@
             this.newpw.Name = "newpw";
             this.newpw.PasswordChar = '*';
             this.newpw.Size = new System.Drawing.Size(256, 26);
-            this.newpw.TabIndex = 141;
+            this.newpw.TabIndex = 4;
             this.newpw.TextChanged += new System.EventHandler(this.newpw_TextChanged);
             // 
             // secanswer
@@ -68,7 +68,7 @@
             this.secanswer.Location = new System.Drawing.Point(253, 221);
             this.secanswer.Name = "secanswer";
             this.secanswer.Size = new System.Drawing.Size(256, 26);
-            this.secanswer.TabIndex = 140;
+            this.secanswer.TabIndex = 3;
             // 
             // name
             // 
@@ -76,7 +76,7 @@
             this.name.Location = new System.Drawing.Point(253, 133);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(256, 26);
-            this.name.TabIndex = 138;
+            this.name.TabIndex = 2;
             // 
             // usersearch
             // 
@@ -84,7 +84,7 @@
             this.usersearch.Location = new System.Drawing.Point(253, 89);
             this.usersearch.Name = "usersearch";
             this.usersearch.Size = new System.Drawing.Size(163, 26);
-            this.usersearch.TabIndex = 137;
+            this.usersearch.TabIndex = 0;
             // 
             // label9
             // 
@@ -174,7 +174,7 @@
             this.bunifuThinButton25.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.bunifuThinButton25.Name = "bunifuThinButton25";
             this.bunifuThinButton25.Size = new System.Drawing.Size(86, 39);
-            this.bunifuThinButton25.TabIndex = 146;
+            this.bunifuThinButton25.TabIndex = 1;
             this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton25.Click += new System.EventHandler(this.bunifuThinButton25_Click);
             // 
@@ -227,7 +227,7 @@
             this.resetbtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.resetbtn.Name = "resetbtn";
             this.resetbtn.Size = new System.Drawing.Size(121, 45);
-            this.resetbtn.TabIndex = 143;
+            this.resetbtn.TabIndex = 6;
             this.resetbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.resetbtn.Click += new System.EventHandler(this.resetbtn_Click);
             // 
@@ -253,7 +253,7 @@
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
             this.bunifuThinButton22.Size = new System.Drawing.Size(121, 45);
-            this.bunifuThinButton22.TabIndex = 142;
+            this.bunifuThinButton22.TabIndex = 7;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
@@ -285,7 +285,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
             this.textBox1.Size = new System.Drawing.Size(256, 26);
-            this.textBox1.TabIndex = 149;
+            this.textBox1.TabIndex = 5;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2

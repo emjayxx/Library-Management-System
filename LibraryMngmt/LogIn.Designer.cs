@@ -72,7 +72,8 @@
             this.pword.Name = "pword";
             this.pword.PasswordChar = '*';
             this.pword.Size = new System.Drawing.Size(256, 26);
-            this.pword.TabIndex = 35;
+            this.pword.TabIndex = 1;
+            this.pword.TextChanged += new System.EventHandler(this.pword_TextChanged);
             // 
             // uname
             // 
@@ -80,7 +81,7 @@
             this.uname.Location = new System.Drawing.Point(250, 265);
             this.uname.Name = "uname";
             this.uname.Size = new System.Drawing.Size(256, 26);
-            this.uname.TabIndex = 34;
+            this.uname.TabIndex = 0;
             // 
             // label3
             // 
@@ -148,7 +149,7 @@
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
             this.bunifuThinButton22.Size = new System.Drawing.Size(190, 39);
-            this.bunifuThinButton22.TabIndex = 44;
+            this.bunifuThinButton22.TabIndex = 3;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
@@ -174,7 +175,7 @@
             this.loginbtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.loginbtn.Name = "loginbtn";
             this.loginbtn.Size = new System.Drawing.Size(187, 45);
-            this.loginbtn.TabIndex = 85;
+            this.loginbtn.TabIndex = 2;
             this.loginbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.loginbtn.Click += new System.EventHandler(this.bunifuThinButton24_Click);
             // 
@@ -200,7 +201,7 @@
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(190, 39);
-            this.bunifuThinButton21.TabIndex = 86;
+            this.bunifuThinButton21.TabIndex = 4;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 

@@ -77,33 +77,25 @@ namespace LibraryMngmt
         private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             String borrow_id = this.bunifuCustomDataGrid1.CurrentRow.Cells[7].Value.ToString();
-
-            if(borrow_id != "0")
+            conn.Open();
+            using (OleDbCommand Command = new OleDbCommand("SELECT * FROM `lib-students` WHERE stud_id = " + borrow_id + "", conn))
             {
-                using (OleDbCommand Command = new OleDbCommand("SELECT * FROM `lib-students` WHERE stud_id = " + borrow_id + "", conn))
+                OleDbDataReader DB_Reader = Command.ExecuteReader();
+
+                if (DB_Reader.Read())
                 {
-                    conn.Open();
-                    OleDbDataReader DB_Reader = Command.ExecuteReader();
+                    studentnamelabel.Text = DB_Reader["stud_name"].ToString();
+                    conn.Close();
 
-                    if (DB_Reader.Read())
-                    {
-                        studentnamelabel.Text = DB_Reader["stud_name"].ToString();
-                        DB_Reader.Close();
-                        conn.Close();
-
-                    } else
-                    {
-                        studentnamelabel.Text = "None";
-                        DB_Reader.Close();
-                        conn.Close();
-                    }
-                    
                 }
-            } else
-            {
-                this.Refresh();
-                studentnamelabel.Text = "None";
+                else
+                {
+                    studentnamelabel.Text = "None";
+                    conn.Close();
+                }
+
             }
+
         }
 
         private void bunifuCustomDataGrid1_CellClick(object sender, DataGridViewCellEventArgs e)

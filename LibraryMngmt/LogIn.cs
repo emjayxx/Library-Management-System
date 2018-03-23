@@ -30,6 +30,7 @@ namespace LibraryMngmt
 
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
+
             int result = 0;
             string cmdText = "SELECT COUNT(*) FROM `lib-admin` WHERE username = '" + uname.Text+"' AND admin_pword = '"+pword.Text+"' ";
             using (OleDbCommand cmd = new OleDbCommand(cmdText, conn))
@@ -95,5 +96,20 @@ namespace LibraryMngmt
         {
 
         }
+
+        private void pword_TextChanged(object sender, EventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space)
+            {
+                // These characters may pass
+                e.Handled = false;
+            }
+            else
+            {
+                // Everything that is not a letter, nor a backspace nor a space will be blocked
+                e.Handled = true;
+            }
+        }
+
     }
 }
