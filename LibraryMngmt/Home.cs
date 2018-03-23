@@ -87,9 +87,11 @@ namespace LibraryMngmt
 
                     if (DB_Reader.Read())
                     {
+                        this.Refresh();
                         studentnamelabel.Text = DB_Reader["stud_name"].ToString();
                     } else
                     {
+                        this.Refresh();
                         studentnamelabel.Text = "None";
                     }
                     DB_Reader.Close();
@@ -216,7 +218,7 @@ namespace LibraryMngmt
             OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
             da.Fill(dt);
             bunifuCustomDataGrid1.DataSource = dt;
-            bunifuCustomDataGrid1.Sort(bunifuCustomDataGrid1.Columns[1], ListSortDirection.Ascending);
+            bunifuCustomDataGrid1.Sort(bunifuCustomDataGrid1.Columns[0], ListSortDirection.Ascending);
         }
 
         private void button2_Click(object sender, EventArgs e)
