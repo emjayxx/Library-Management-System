@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label book_nameLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.label1 = new System.Windows.Forms.Label();
             this._lib_dbDataSet = new LibraryMngmt._lib_dbDataSet();
@@ -43,28 +43,6 @@
             this.lib_studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lib_studentsTableAdapter = new LibraryMngmt._lib_dbDataSetTableAdapters.lib_studentsTableAdapter();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.bunifuCustomDataGrid2 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.studidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studcourseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studyrlevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studguardianDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.searchbox = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.studentnamelabel = new System.Windows.Forms.Label();
             this.bookidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.booknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookauthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,6 +51,28 @@
             this.bookpagesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.book_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookborrowerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bunifuCustomDataGrid2 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.studidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studcourseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studyrlevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studguardianDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchbox = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.studentnamelabel = new System.Windows.Forms.Label();
+            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             book_nameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this._lib_dbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lib_booksBindingSource)).BeginInit();
@@ -143,20 +143,20 @@
             this.bunifuCustomDataGrid1.AllowUserToOrderColumns = true;
             this.bunifuCustomDataGrid1.AllowUserToResizeColumns = false;
             this.bunifuCustomDataGrid1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.bunifuCustomDataGrid1.AutoGenerateColumns = false;
             this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
             this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.bookidDataGridViewTextBoxColumn,
@@ -186,25 +186,88 @@
             this.bunifuCustomDataGrid1.VirtualMode = true;
             this.bunifuCustomDataGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellContentClick);
             // 
+            // bookidDataGridViewTextBoxColumn
+            // 
+            this.bookidDataGridViewTextBoxColumn.DataPropertyName = "book_id";
+            this.bookidDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.bookidDataGridViewTextBoxColumn.Name = "bookidDataGridViewTextBoxColumn";
+            this.bookidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookidDataGridViewTextBoxColumn.Width = 25;
+            // 
+            // booknameDataGridViewTextBoxColumn
+            // 
+            this.booknameDataGridViewTextBoxColumn.DataPropertyName = "book_name";
+            this.booknameDataGridViewTextBoxColumn.HeaderText = "Book Name";
+            this.booknameDataGridViewTextBoxColumn.Name = "booknameDataGridViewTextBoxColumn";
+            this.booknameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.booknameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // bookauthorDataGridViewTextBoxColumn
+            // 
+            this.bookauthorDataGridViewTextBoxColumn.DataPropertyName = "book_author";
+            this.bookauthorDataGridViewTextBoxColumn.HeaderText = "Author";
+            this.bookauthorDataGridViewTextBoxColumn.Name = "bookauthorDataGridViewTextBoxColumn";
+            this.bookauthorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bookeditionDataGridViewTextBoxColumn
+            // 
+            this.bookeditionDataGridViewTextBoxColumn.DataPropertyName = "book_edition";
+            this.bookeditionDataGridViewTextBoxColumn.HeaderText = "Ed";
+            this.bookeditionDataGridViewTextBoxColumn.Name = "bookeditionDataGridViewTextBoxColumn";
+            this.bookeditionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookeditionDataGridViewTextBoxColumn.Width = 30;
+            // 
+            // bookpriceDataGridViewTextBoxColumn
+            // 
+            this.bookpriceDataGridViewTextBoxColumn.DataPropertyName = "book_price";
+            this.bookpriceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.bookpriceDataGridViewTextBoxColumn.Name = "bookpriceDataGridViewTextBoxColumn";
+            this.bookpriceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookpriceDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // bookpagesDataGridViewTextBoxColumn
+            // 
+            this.bookpagesDataGridViewTextBoxColumn.DataPropertyName = "book_pages";
+            this.bookpagesDataGridViewTextBoxColumn.HeaderText = "Page#";
+            this.bookpagesDataGridViewTextBoxColumn.Name = "bookpagesDataGridViewTextBoxColumn";
+            this.bookpagesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookpagesDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // book_status
+            // 
+            this.book_status.DataPropertyName = "book_status";
+            this.book_status.HeaderText = "Status";
+            this.book_status.Name = "book_status";
+            this.book_status.ReadOnly = true;
+            this.book_status.Width = 40;
+            // 
+            // bookborrowerDataGridViewTextBoxColumn
+            // 
+            this.bookborrowerDataGridViewTextBoxColumn.DataPropertyName = "book_borrower";
+            this.bookborrowerDataGridViewTextBoxColumn.HeaderText = "Borrower";
+            this.bookborrowerDataGridViewTextBoxColumn.Name = "bookborrowerDataGridViewTextBoxColumn";
+            this.bookborrowerDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookborrowerDataGridViewTextBoxColumn.Width = 45;
+            // 
             // bunifuCustomDataGrid2
             // 
             this.bunifuCustomDataGrid2.AllowUserToAddRows = false;
             this.bunifuCustomDataGrid2.AllowUserToDeleteRows = false;
             this.bunifuCustomDataGrid2.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.bunifuCustomDataGrid2.AutoGenerateColumns = false;
             this.bunifuCustomDataGrid2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
             this.bunifuCustomDataGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuCustomDataGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.bunifuCustomDataGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuCustomDataGrid2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.studidDataGridViewTextBoxColumn,
@@ -279,6 +342,122 @@
             this.searchbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.searchbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.MistyRose;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.textBox1.Location = new System.Drawing.Point(272, 376);
+            this.textBox1.MinimumSize = new System.Drawing.Size(0, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(202, 22);
+            this.textBox1.TabIndex = 151;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // studentnamelabel
+            // 
+            this.studentnamelabel.Font = new System.Drawing.Font("Raleway", 10F);
+            this.studentnamelabel.ForeColor = System.Drawing.Color.White;
+            this.studentnamelabel.Location = new System.Drawing.Point(333, 326);
+            this.studentnamelabel.Name = "studentnamelabel";
+            this.studentnamelabel.Size = new System.Drawing.Size(183, 23);
+            this.studentnamelabel.TabIndex = 156;
+            this.studentnamelabel.Text = "none";
+            // 
+            // bunifuFlatButton3
+            // 
+            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuFlatButton3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton3.BorderRadius = 0;
+            this.bunifuFlatButton3.ButtonText = "New Book";
+            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton3.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton3.Iconimage = global::LibraryMngmt.Properties.Resources.about;
+            this.bunifuFlatButton3.Iconimage_right = null;
+            this.bunifuFlatButton3.Iconimage_right_Selected = null;
+            this.bunifuFlatButton3.Iconimage_Selected = null;
+            this.bunifuFlatButton3.IconMarginLeft = 0;
+            this.bunifuFlatButton3.IconMarginRight = 0;
+            this.bunifuFlatButton3.IconRightVisible = true;
+            this.bunifuFlatButton3.IconRightZoom = 0D;
+            this.bunifuFlatButton3.IconVisible = true;
+            this.bunifuFlatButton3.IconZoom = 80D;
+            this.bunifuFlatButton3.IsTab = false;
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(770, 537);
+            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
+            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.MistyRose;
+            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton3.selected = false;
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(24, 28);
+            this.bunifuFlatButton3.TabIndex = 157;
+            this.bunifuFlatButton3.Text = "New Book";
+            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Raleway", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::LibraryMngmt.Properties.Resources.deletepink;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.MistyRose;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(49, 372);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(35, 28);
+            this.button1.TabIndex = 154;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::LibraryMngmt.Properties.Resources.refreshpink;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.MistyRose;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(12, 372);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(35, 28);
+            this.button2.TabIndex = 153;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::LibraryMngmt.Properties.Resources.searchpink;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.MistyRose;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(480, 370);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(36, 32);
+            this.button6.TabIndex = 152;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::LibraryMngmt.Properties.Resources.deletepink;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.MistyRose;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(49, 67);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(35, 28);
+            this.button4.TabIndex = 150;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // button3
             // 
             this.button3.BackgroundImage = global::LibraryMngmt.Properties.Resources.refreshpink;
@@ -311,7 +490,7 @@
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuThinButton22.Location = new System.Drawing.Point(549, 291);
+            this.bunifuThinButton22.Location = new System.Drawing.Point(549, 297);
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
             this.bunifuThinButton22.Size = new System.Drawing.Size(217, 45);
@@ -344,68 +523,6 @@
             this.bunifuThinButton21.TabIndex = 146;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
-            // 
-            // bunifuFlatButton3
-            // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "About";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton3.Iconimage")));
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 50;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 90D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(549, 499);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.MistyRose;
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(217, 56);
-            this.bunifuFlatButton3.TabIndex = 106;
-            this.bunifuFlatButton3.Text = "About";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Raleway", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuThinButton23
-            // 
-            this.bunifuThinButton23.ActiveBorderThickness = 1;
-            this.bunifuThinButton23.ActiveCornerRadius = 30;
-            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.Black;
-            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "x";
-            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton23.Font = new System.Drawing.Font("Raleway", 20F);
-            this.bunifuThinButton23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.bunifuThinButton23.IdleBorderThickness = 2;
-            this.bunifuThinButton23.IdleCornerRadius = 30;
-            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.Gray;
-            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(780, -4);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
-            this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(26, 32);
-            this.bunifuThinButton23.TabIndex = 105;
-            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
             // 
             // bunifuFlatButton2
             // 
@@ -505,147 +622,31 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // button4
+            // bunifuThinButton23
             // 
-            this.button4.BackgroundImage = global::LibraryMngmt.Properties.Resources.deletepink;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.MistyRose;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(49, 67);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(35, 28);
-            this.button4.TabIndex = 150;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackgroundImage = global::LibraryMngmt.Properties.Resources.searchpink;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.MistyRose;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(480, 370);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(36, 32);
-            this.button6.TabIndex = 152;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.MistyRose;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.textBox1.Location = new System.Drawing.Point(272, 376);
-            this.textBox1.MinimumSize = new System.Drawing.Size(0, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 22);
-            this.textBox1.TabIndex = 151;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::LibraryMngmt.Properties.Resources.deletepink;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.MistyRose;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(49, 372);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 28);
-            this.button1.TabIndex = 154;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::LibraryMngmt.Properties.Resources.refreshpink;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.MistyRose;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(12, 372);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(35, 28);
-            this.button2.TabIndex = 153;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // studentnamelabel
-            // 
-            this.studentnamelabel.Font = new System.Drawing.Font("Raleway", 10F);
-            this.studentnamelabel.ForeColor = System.Drawing.Color.White;
-            this.studentnamelabel.Location = new System.Drawing.Point(333, 326);
-            this.studentnamelabel.Name = "studentnamelabel";
-            this.studentnamelabel.Size = new System.Drawing.Size(183, 23);
-            this.studentnamelabel.TabIndex = 156;
-            this.studentnamelabel.Text = "none";
-            // 
-            // bookidDataGridViewTextBoxColumn
-            // 
-            this.bookidDataGridViewTextBoxColumn.DataPropertyName = "book_id";
-            this.bookidDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.bookidDataGridViewTextBoxColumn.Name = "bookidDataGridViewTextBoxColumn";
-            this.bookidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bookidDataGridViewTextBoxColumn.Width = 25;
-            // 
-            // booknameDataGridViewTextBoxColumn
-            // 
-            this.booknameDataGridViewTextBoxColumn.DataPropertyName = "book_name";
-            this.booknameDataGridViewTextBoxColumn.HeaderText = "Book Name";
-            this.booknameDataGridViewTextBoxColumn.Name = "booknameDataGridViewTextBoxColumn";
-            this.booknameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.booknameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // bookauthorDataGridViewTextBoxColumn
-            // 
-            this.bookauthorDataGridViewTextBoxColumn.DataPropertyName = "book_author";
-            this.bookauthorDataGridViewTextBoxColumn.HeaderText = "Author";
-            this.bookauthorDataGridViewTextBoxColumn.Name = "bookauthorDataGridViewTextBoxColumn";
-            this.bookauthorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bookeditionDataGridViewTextBoxColumn
-            // 
-            this.bookeditionDataGridViewTextBoxColumn.DataPropertyName = "book_edition";
-            this.bookeditionDataGridViewTextBoxColumn.HeaderText = "Ed";
-            this.bookeditionDataGridViewTextBoxColumn.Name = "bookeditionDataGridViewTextBoxColumn";
-            this.bookeditionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bookeditionDataGridViewTextBoxColumn.Width = 30;
-            // 
-            // bookpriceDataGridViewTextBoxColumn
-            // 
-            this.bookpriceDataGridViewTextBoxColumn.DataPropertyName = "book_price";
-            this.bookpriceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.bookpriceDataGridViewTextBoxColumn.Name = "bookpriceDataGridViewTextBoxColumn";
-            this.bookpriceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bookpriceDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // bookpagesDataGridViewTextBoxColumn
-            // 
-            this.bookpagesDataGridViewTextBoxColumn.DataPropertyName = "book_pages";
-            this.bookpagesDataGridViewTextBoxColumn.HeaderText = "Page#";
-            this.bookpagesDataGridViewTextBoxColumn.Name = "bookpagesDataGridViewTextBoxColumn";
-            this.bookpagesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bookpagesDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // book_status
-            // 
-            this.book_status.DataPropertyName = "book_status";
-            this.book_status.HeaderText = "Status";
-            this.book_status.Name = "book_status";
-            this.book_status.ReadOnly = true;
-            this.book_status.Width = 40;
-            // 
-            // bookborrowerDataGridViewTextBoxColumn
-            // 
-            this.bookborrowerDataGridViewTextBoxColumn.DataPropertyName = "book_borrower";
-            this.bookborrowerDataGridViewTextBoxColumn.HeaderText = "Borrower";
-            this.bookborrowerDataGridViewTextBoxColumn.Name = "bookborrowerDataGridViewTextBoxColumn";
-            this.bookborrowerDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bookborrowerDataGridViewTextBoxColumn.Width = 45;
+            this.bunifuThinButton23.ActiveBorderThickness = 1;
+            this.bunifuThinButton23.ActiveCornerRadius = 30;
+            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.Black;
+            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
+            this.bunifuThinButton23.ButtonText = "x";
+            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton23.Font = new System.Drawing.Font("Raleway", 20F);
+            this.bunifuThinButton23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.bunifuThinButton23.IdleBorderThickness = 2;
+            this.bunifuThinButton23.IdleCornerRadius = 30;
+            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.Gray;
+            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton23.Location = new System.Drawing.Point(782, -3);
+            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
+            this.bunifuThinButton23.Name = "bunifuThinButton23";
+            this.bunifuThinButton23.Size = new System.Drawing.Size(26, 32);
+            this.bunifuThinButton23.TabIndex = 158;
+            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click_1);
             // 
             // Home
             // 
@@ -653,6 +654,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(806, 577);
+            this.Controls.Add(this.bunifuThinButton23);
+            this.Controls.Add(this.bunifuFlatButton3);
             this.Controls.Add(this.studentnamelabel);
             this.Controls.Add(book_nameLabel);
             this.Controls.Add(this.button1);
@@ -665,8 +668,6 @@
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.bunifuCustomDataGrid2);
             this.Controls.Add(this.bunifuCustomDataGrid1);
-            this.Controls.Add(this.bunifuFlatButton3);
-            this.Controls.Add(this.bunifuThinButton23);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.button5);
@@ -696,8 +697,6 @@
         private System.Windows.Forms.Button button5;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private _lib_dbDataSet _lib_dbDataSet;
         private System.Windows.Forms.BindingSource lib_booksBindingSource;
         private _lib_dbDataSetTableAdapters.lib_booksTableAdapter lib_booksTableAdapter;
@@ -729,5 +728,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bookpagesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn book_status;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookborrowerDataGridViewTextBoxColumn;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
     }
 }

@@ -274,6 +274,19 @@ namespace LibraryMngmt
         {
 
         }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            About aboutus = new About();
+            this.Hide();
+            aboutus.ShowDialog();
+            this.Close();
+        }
+
+        private void bunifuThinButton23_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="borrow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_lib_dbDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="borrow.resx">
       <DependentUpon>borrow.cs</DependentUpon>
     </EmbeddedResource>
