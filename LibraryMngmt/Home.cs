@@ -340,21 +340,24 @@ namespace LibraryMngmt
         private void button10_Click(object sender, EventArgs e)
         {
             String booktitle = this.bunifuCustomDataGrid1.CurrentRow.Cells[1].Value.ToString();
+            String borrower = this.bunifuCustomDataGrid1.CurrentRow.Cells[7].Value.ToString();
 
             DialogResult diagres = MessageBox.Show("Delete the Book: " + booktitle + "?", "Confirm?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
-
+            //conn.Open();
             if (diagres == DialogResult.Yes)
             {
-                dt = new DataTable();
-                string sql = "DELETE FROM `lib-books` WHERE book_name = '" + booktitle + "'";
-                OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
-                da.Fill(dt);
-                bunifuCustomDataGrid1.DataSource = dt;
+                    dt = new DataTable();
+                    string sql = "DELETE FROM `lib-books` WHERE book_name = '" + booktitle + "'";
+                    OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
+                    da.Fill(dt);
+                    bunifuCustomDataGrid1.DataSource = dt;
 
-                string fresh = "SELECT * FROM `lib-books`";
-                OleDbDataAdapter freshie = new OleDbDataAdapter(fresh, conn);
-                freshie.Fill(dt);
-                bunifuCustomDataGrid1.DataSource = fresh;
+                    string fresh = "SELECT * FROM `lib-books`";
+                    OleDbDataAdapter freshie = new OleDbDataAdapter(fresh, conn);
+                    freshie.Fill(dt);
+                    bunifuCustomDataGrid1.DataSource = fresh;
+               
+                conn.Close();
             }
         }
 

@@ -97,19 +97,11 @@ namespace LibraryMngmt
 
         }
 
-        /*private void pword_TextChanged(object sender, EventArgs e)
+        private void uname_TextChanged(object sender, EventArgs e)
         {
-            if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space)
-            {
-                // These characters may pass
-                e.Handled = false;
-            }
-            else
-            {
-                // Everything that is not a letter, nor a backspace nor a space will be blocked
-                e.Handled = true;
-            }
-        }*/
+
+        }
+
 
     }
 }

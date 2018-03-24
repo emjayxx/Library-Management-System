@@ -124,9 +124,6 @@
   <data name="searchpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\searchpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="newstudentpink1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\newstudentpink1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="returnbookpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\returnbookpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,8 +139,8 @@
   <data name="addbookpink1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addbookpink1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="books31" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\books31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="newstudentpink1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newstudentpink1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="signoutpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\signoutpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,19 +151,25 @@
   <data name="addbookpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addbookpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="addbookpink2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addbookpink2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="books3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\books3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="addstudentpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addstudentpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="books31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\books31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="newbookpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newbookpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="addbookpink2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\addbookpink2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newstudentpink2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newstudentpink2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

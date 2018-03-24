@@ -71,6 +71,7 @@
             this.uname.Name = "uname";
             this.uname.Size = new System.Drawing.Size(256, 26);
             this.uname.TabIndex = 0;
+            this.uname.TextChanged += new System.EventHandler(this.uname_TextChanged);
             // 
             // label3
             // 

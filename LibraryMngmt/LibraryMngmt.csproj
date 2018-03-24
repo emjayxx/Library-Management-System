@@ -209,6 +209,7 @@
     <Content Include="lib-db.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\newstudentpink2.png" />
     <None Include="Resources\addbookpink2.png" />
     <None Include="Resources\addstudentpink.png" />
     <None Include="Resources\searchpink.png" />
