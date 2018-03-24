@@ -343,6 +343,7 @@
             // 
             this.book_nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
             this.book_nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.book_nameTextBox.Enabled = false;
             this.book_nameTextBox.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.book_nameTextBox.ForeColor = System.Drawing.Color.White;
             this.book_nameTextBox.Location = new System.Drawing.Point(134, 138);
@@ -354,6 +355,7 @@
             // 
             this.book_authorTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
             this.book_authorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.book_authorTextBox.Enabled = false;
             this.book_authorTextBox.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.book_authorTextBox.ForeColor = System.Drawing.Color.White;
             this.book_authorTextBox.Location = new System.Drawing.Point(134, 172);
@@ -365,6 +367,7 @@
             // 
             this.book_editionTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
             this.book_editionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.book_editionTextBox.Enabled = false;
             this.book_editionTextBox.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.book_editionTextBox.ForeColor = System.Drawing.Color.White;
             this.book_editionTextBox.Location = new System.Drawing.Point(134, 204);
@@ -376,6 +379,7 @@
             // 
             this.book_priceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
             this.book_priceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.book_priceTextBox.Enabled = false;
             this.book_priceTextBox.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.book_priceTextBox.ForeColor = System.Drawing.Color.White;
             this.book_priceTextBox.Location = new System.Drawing.Point(134, 240);
@@ -387,6 +391,7 @@
             // 
             this.book_pagesTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
             this.book_pagesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.book_pagesTextBox.Enabled = false;
             this.book_pagesTextBox.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.book_pagesTextBox.ForeColor = System.Drawing.Color.White;
             this.book_pagesTextBox.Location = new System.Drawing.Point(134, 274);
