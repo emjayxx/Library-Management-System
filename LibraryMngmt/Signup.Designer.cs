@@ -61,6 +61,7 @@
             this.secanswer.Name = "secanswer";
             this.secanswer.Size = new System.Drawing.Size(256, 26);
             this.secanswer.TabIndex = 5;
+            this.secanswer.TextChanged += new System.EventHandler(this.secanswer_TextChanged);
             // 
             // pword
             // 
@@ -81,6 +82,7 @@
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(256, 26);
             this.name.TabIndex = 1;
+            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
             // uname
             // 

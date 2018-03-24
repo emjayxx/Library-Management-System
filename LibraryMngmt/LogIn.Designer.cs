@@ -63,6 +63,7 @@
             this.pword.PasswordChar = '*';
             this.pword.Size = new System.Drawing.Size(256, 26);
             this.pword.TabIndex = 1;
+            this.pword.TextChanged += new System.EventHandler(this.pword_TextChanged);
             // 
             // uname
             // 

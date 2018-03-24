@@ -69,6 +69,7 @@
             this.secanswer.Name = "secanswer";
             this.secanswer.Size = new System.Drawing.Size(256, 26);
             this.secanswer.TabIndex = 3;
+            this.secanswer.TextChanged += new System.EventHandler(this.secanswer_TextChanged);
             // 
             // name
             // 
@@ -77,6 +78,7 @@
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(256, 26);
             this.name.TabIndex = 2;
+            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
             // usersearch
             // 
@@ -85,6 +87,7 @@
             this.usersearch.Name = "usersearch";
             this.usersearch.Size = new System.Drawing.Size(163, 26);
             this.usersearch.TabIndex = 0;
+            this.usersearch.TextChanged += new System.EventHandler(this.usersearch_TextChanged);
             // 
             // label9
             // 

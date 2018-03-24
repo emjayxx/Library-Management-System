@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Text.RegularExpressions;
 
 namespace LibraryMngmt
 {
@@ -62,6 +63,11 @@ namespace LibraryMngmt
 
         private void searchbox_TextChanged(object sender, EventArgs e)
         {
+            if (Regex.IsMatch(searchbox.Text, @"^[\sa-zA-Z0-9]*$")) return;
+
+            searchbox.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
+
             dt = new DataTable();
             string sql = "SELECT * FROM `lib-students` WHERE stud_name LIKE '%" + searchbox.Text.ToString() + "%' OR stud_course LIKE '%" + searchbox.Text.ToString() + "%' OR stud_yrlevel LIKE '" + searchbox.Text.ToString() + "'";
             OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);

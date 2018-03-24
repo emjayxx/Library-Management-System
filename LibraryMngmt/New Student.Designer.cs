@@ -59,6 +59,7 @@
             this.stuguardian.Name = "stuguardian";
             this.stuguardian.Size = new System.Drawing.Size(256, 26);
             this.stuguardian.TabIndex = 3;
+            this.stuguardian.TextChanged += new System.EventHandler(this.stuguardian_TextChanged);
             // 
             // stuyrlevel
             // 
@@ -67,6 +68,7 @@
             this.stuyrlevel.Name = "stuyrlevel";
             this.stuyrlevel.Size = new System.Drawing.Size(256, 26);
             this.stuyrlevel.TabIndex = 2;
+            this.stuyrlevel.TextChanged += new System.EventHandler(this.stuyrlevel_TextChanged);
             // 
             // stucourse
             // 
@@ -75,6 +77,7 @@
             this.stucourse.Name = "stucourse";
             this.stucourse.Size = new System.Drawing.Size(256, 26);
             this.stucourse.TabIndex = 1;
+            this.stucourse.TextChanged += new System.EventHandler(this.stucourse_TextChanged);
             // 
             // stuname
             // 

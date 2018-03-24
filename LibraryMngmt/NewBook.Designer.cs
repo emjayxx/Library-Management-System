@@ -151,6 +151,7 @@
             this.bookprice.Name = "bookprice";
             this.bookprice.Size = new System.Drawing.Size(256, 26);
             this.bookprice.TabIndex = 3;
+            this.bookprice.TextChanged += new System.EventHandler(this.bookprice_TextChanged);
             // 
             // bookauthor
             // 
@@ -160,6 +161,7 @@
             this.bookauthor.Name = "bookauthor";
             this.bookauthor.Size = new System.Drawing.Size(256, 26);
             this.bookauthor.TabIndex = 2;
+            this.bookauthor.TextChanged += new System.EventHandler(this.bookauthor_TextChanged);
             // 
             // bookedition
             // 
@@ -169,6 +171,7 @@
             this.bookedition.Name = "bookedition";
             this.bookedition.Size = new System.Drawing.Size(256, 26);
             this.bookedition.TabIndex = 1;
+            this.bookedition.TextChanged += new System.EventHandler(this.bookedition_TextChanged);
             // 
             // bookname
             // 
@@ -178,6 +181,7 @@
             this.bookname.Name = "bookname";
             this.bookname.Size = new System.Drawing.Size(256, 26);
             this.bookname.TabIndex = 0;
+            this.bookname.TextChanged += new System.EventHandler(this.bookname_TextChanged);
             // 
             // bookpages
             // 
@@ -187,6 +191,7 @@
             this.bookpages.Name = "bookpages";
             this.bookpages.Size = new System.Drawing.Size(256, 26);
             this.bookpages.TabIndex = 4;
+            this.bookpages.TextChanged += new System.EventHandler(this.bookpages_TextChanged);
             // 
             // bunifuThinButton21
             // 

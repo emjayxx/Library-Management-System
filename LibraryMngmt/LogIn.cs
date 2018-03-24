@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Text.RegularExpressions;
 
 namespace LibraryMngmt
 {
@@ -99,9 +100,19 @@ namespace LibraryMngmt
 
         private void uname_TextChanged(object sender, EventArgs e)
         {
+            if (Regex.IsMatch(uname.Text, @"^[\sa-zA-Z0-9]*$")) return;
 
+            uname.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
         }
 
+        private void pword_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(pword.Text, @"^[\sa-zA-Z0-9]*$")) return;
 
+            pword.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
+
+        }
     }
 }

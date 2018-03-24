@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Text.RegularExpressions;
 
 namespace LibraryMngmt
 {
@@ -111,6 +112,11 @@ namespace LibraryMngmt
 
         private void newpw_TextChanged(object sender, EventArgs e)
         {
+            if (Regex.IsMatch(newpw.Text, @"^[\sa-zA-Z0-9]*$")) return;
+
+            newpw.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
+
             if (newpw.TextLength > 7)
             {
                 this.Refresh();
@@ -127,6 +133,11 @@ namespace LibraryMngmt
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            if (Regex.IsMatch(textBox1.Text, @"^[\sa-zA-Z0-9]*$")) return;
+
+            textBox1.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
+
             if (newpw.Text != null && textBox1.Text != null)
             {
 
@@ -150,6 +161,30 @@ namespace LibraryMngmt
                 confirmcorrect.Text = "X";
                 confirmcorrect.ForeColor = Color.Tomato;
             }
+        }
+
+        private void usersearch_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(usersearch.Text, @"^[\sa-zA-Z0-9]*$")) return;
+
+            usersearch.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
+        }
+
+        private void name_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(name.Text, @"^[\sa-zA-Z]*$")) return;
+
+            name.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
+        }
+
+        private void secanswer_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(secanswer.Text, @"^[\sa-zA-Z0-9]*$")) return;
+
+            secanswer.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
         }
     }
 }

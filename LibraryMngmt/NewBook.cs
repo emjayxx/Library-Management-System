@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Text.RegularExpressions;
 
 namespace LibraryMngmt
 {
@@ -60,5 +61,44 @@ namespace LibraryMngmt
             this.Close();
         }
 
+        private void bookname_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(bookname.Text, @"^[\sa-zA-Z0-9]*$")) return;
+
+            bookname.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
+        }
+
+        private void bookedition_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(bookedition.Text, @"^[0-9]*$")) return;
+
+            bookedition.Text = String.Empty;
+            MessageBox.Show("Only numbers are allowed.");
+        }
+
+        private void bookauthor_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(bookauthor.Text, @"^[\sa-zA-Z0-9]*$")) return;
+
+            bookauthor.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
+        }
+
+        private void bookprice_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(bookprice.Text, @"^[0-9]*$")) return;
+
+            bookprice.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
+        }
+
+        private void bookpages_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(bookpages.Text, @"^[0-9]*$")) return;
+
+            bookpages.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
+        }
     }
 }

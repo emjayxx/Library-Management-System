@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Text.RegularExpressions;
 
 
 namespace LibraryMngmt
@@ -78,7 +79,34 @@ namespace LibraryMngmt
 
         private void stuname_TextChanged(object sender, EventArgs e)
         {
+            if (Regex.IsMatch(stuname.Text, @"^[\sa-zA-Z]*$")) return;
 
+            stuname.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
+        }
+
+        private void stucourse_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(stucourse.Text, @"^[\sa-zA-Z0-9]*$")) return;
+
+            stucourse.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
+        }
+
+        private void stuyrlevel_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(stuyrlevel.Text, @"^[0-9]*$")) return;
+
+            stuyrlevel.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
+        }
+
+        private void stuguardian_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(stuguardian.Text, @"^[\sa-zA-Z0-9]*$")) return;
+
+            stuguardian.Text = String.Empty;
+            MessageBox.Show("Special characters are not allowed.");
         }
     }
 }
