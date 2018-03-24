@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.Label book_idLabel;
             System.Windows.Forms.Label book_nameLabel;
             System.Windows.Forms.Label book_authorLabel;
             System.Windows.Forms.Label book_editionLabel;
             System.Windows.Forms.Label book_priceLabel;
             System.Windows.Forms.Label book_pagesLabel;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(borrow));
             this.label1 = new System.Windows.Forms.Label();
             this._lib_dbDataSet = new LibraryMngmt._lib_dbDataSet();
             this.lib_booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lib_booksTableAdapter = new LibraryMngmt._lib_dbDataSetTableAdapters.lib_booksTableAdapter();
             this.tableAdapterManager = new LibraryMngmt._lib_dbDataSetTableAdapters.TableAdapterManager();
+            this.lib_studentsTableAdapter = new LibraryMngmt._lib_dbDataSetTableAdapters.lib_studentsTableAdapter();
             this.searchbox = new System.Windows.Forms.TextBox();
             this.lib_studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lib_studentsTableAdapter = new LibraryMngmt._lib_dbDataSetTableAdapters.lib_studentsTableAdapter();
             this.bunifuCustomDataGrid2 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.studidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,9 +54,6 @@
             this.studguardianDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.book_idLabel1 = new System.Windows.Forms.Label();
@@ -65,9 +62,12 @@
             this.book_editionTextBox = new System.Windows.Forms.TextBox();
             this.book_priceTextBox = new System.Windows.Forms.TextBox();
             this.book_pagesTextBox = new System.Windows.Forms.TextBox();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             book_idLabel = new System.Windows.Forms.Label();
             book_nameLabel = new System.Windows.Forms.Label();
             book_authorLabel = new System.Windows.Forms.Label();
@@ -78,10 +78,76 @@
             ((System.ComponentModel.ISupportInitialize)(this.lib_booksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lib_studentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // book_idLabel
+            // 
+            book_idLabel.AutoSize = true;
+            book_idLabel.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            book_idLabel.ForeColor = System.Drawing.Color.White;
+            book_idLabel.Location = new System.Drawing.Point(12, 104);
+            book_idLabel.Name = "book_idLabel";
+            book_idLabel.Size = new System.Drawing.Size(96, 26);
+            book_idLabel.TabIndex = 148;
+            book_idLabel.Text = "Book ID:";
+            // 
+            // book_nameLabel
+            // 
+            book_nameLabel.AutoSize = true;
+            book_nameLabel.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            book_nameLabel.ForeColor = System.Drawing.Color.White;
+            book_nameLabel.Location = new System.Drawing.Point(12, 138);
+            book_nameLabel.Name = "book_nameLabel";
+            book_nameLabel.Size = new System.Drawing.Size(60, 26);
+            book_nameLabel.TabIndex = 150;
+            book_nameLabel.Text = "Title:";
+            // 
+            // book_authorLabel
+            // 
+            book_authorLabel.AutoSize = true;
+            book_authorLabel.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            book_authorLabel.ForeColor = System.Drawing.Color.White;
+            book_authorLabel.Location = new System.Drawing.Point(12, 172);
+            book_authorLabel.Name = "book_authorLabel";
+            book_authorLabel.Size = new System.Drawing.Size(85, 26);
+            book_authorLabel.TabIndex = 152;
+            book_authorLabel.Text = "Author:";
+            // 
+            // book_editionLabel
+            // 
+            book_editionLabel.AutoSize = true;
+            book_editionLabel.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            book_editionLabel.ForeColor = System.Drawing.Color.White;
+            book_editionLabel.Location = new System.Drawing.Point(12, 206);
+            book_editionLabel.Name = "book_editionLabel";
+            book_editionLabel.Size = new System.Drawing.Size(85, 26);
+            book_editionLabel.TabIndex = 154;
+            book_editionLabel.Text = "Edition:";
+            // 
+            // book_priceLabel
+            // 
+            book_priceLabel.AutoSize = true;
+            book_priceLabel.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            book_priceLabel.ForeColor = System.Drawing.Color.White;
+            book_priceLabel.Location = new System.Drawing.Point(12, 240);
+            book_priceLabel.Name = "book_priceLabel";
+            book_priceLabel.Size = new System.Drawing.Size(68, 26);
+            book_priceLabel.TabIndex = 156;
+            book_priceLabel.Text = "Price:";
+            // 
+            // book_pagesLabel
+            // 
+            book_pagesLabel.AutoSize = true;
+            book_pagesLabel.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            book_pagesLabel.ForeColor = System.Drawing.Color.White;
+            book_pagesLabel.Location = new System.Drawing.Point(13, 274);
+            book_pagesLabel.Name = "book_pagesLabel";
+            book_pagesLabel.Size = new System.Drawing.Size(80, 26);
+            book_pagesLabel.TabIndex = 158;
+            book_pagesLabel.Text = "Pages:";
             // 
             // label1
             // 
@@ -112,8 +178,13 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.lib_adminTableAdapter = null;
             this.tableAdapterManager.lib_booksTableAdapter = this.lib_booksTableAdapter;
+            this.tableAdapterManager.lib_secTableAdapter = null;
             this.tableAdapterManager.lib_studentsTableAdapter = this.lib_studentsTableAdapter;
             this.tableAdapterManager.UpdateOrder = LibraryMngmt._lib_dbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // lib_studentsTableAdapter
+            // 
+            this.lib_studentsTableAdapter.ClearBeforeFill = true;
             // 
             // searchbox
             // 
@@ -124,7 +195,7 @@
             this.searchbox.Location = new System.Drawing.Point(134, 372);
             this.searchbox.MinimumSize = new System.Drawing.Size(0, 25);
             this.searchbox.Name = "searchbox";
-            this.searchbox.Size = new System.Drawing.Size(202, 25);
+            this.searchbox.Size = new System.Drawing.Size(202, 22);
             this.searchbox.TabIndex = 22;
             this.searchbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.searchbox.TextChanged += new System.EventHandler(this.searchbox_TextChanged);
@@ -133,10 +204,6 @@
             // 
             this.lib_studentsBindingSource.DataMember = "lib-students";
             this.lib_studentsBindingSource.DataSource = this._lib_dbDataSet;
-            // 
-            // lib_studentsTableAdapter
-            // 
-            this.lib_studentsTableAdapter.ClearBeforeFill = true;
             // 
             // bunifuCustomDataGrid2
             // 
@@ -230,7 +297,6 @@
             // 
             // button5
             // 
-            this.button5.BackgroundImage = global::LibraryMngmt.Properties.Resources.searchpink;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.MistyRose;
             this.button5.FlatAppearance.BorderSize = 0;
@@ -240,36 +306,6 @@
             this.button5.Size = new System.Drawing.Size(36, 32);
             this.button5.TabIndex = 23;
             this.button5.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LibraryMngmt.Properties.Resources.issuebookpink;
-            this.pictureBox1.Location = new System.Drawing.Point(104, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::LibraryMngmt.Properties.Resources.newstudentpink;
-            this.pictureBox3.Location = new System.Drawing.Point(17, 327);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(33, 36);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 163;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::LibraryMngmt.Properties.Resources.newbookpink;
-            this.pictureBox2.Location = new System.Drawing.Point(17, 67);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 162;
-            this.pictureBox2.TabStop = false;
             // 
             // label4
             // 
@@ -293,17 +329,6 @@
             this.label3.TabIndex = 160;
             this.label3.Text = "Book Details:";
             // 
-            // book_idLabel
-            // 
-            book_idLabel.AutoSize = true;
-            book_idLabel.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            book_idLabel.ForeColor = System.Drawing.Color.White;
-            book_idLabel.Location = new System.Drawing.Point(12, 104);
-            book_idLabel.Name = "book_idLabel";
-            book_idLabel.Size = new System.Drawing.Size(96, 26);
-            book_idLabel.TabIndex = 148;
-            book_idLabel.Text = "Book ID:";
-            // 
             // book_idLabel1
             // 
             this.book_idLabel1.Font = new System.Drawing.Font("Raleway", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -313,17 +338,6 @@
             this.book_idLabel1.Size = new System.Drawing.Size(100, 23);
             this.book_idLabel1.TabIndex = 149;
             this.book_idLabel1.Text = "label2";
-            // 
-            // book_nameLabel
-            // 
-            book_nameLabel.AutoSize = true;
-            book_nameLabel.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            book_nameLabel.ForeColor = System.Drawing.Color.White;
-            book_nameLabel.Location = new System.Drawing.Point(12, 138);
-            book_nameLabel.Name = "book_nameLabel";
-            book_nameLabel.Size = new System.Drawing.Size(60, 26);
-            book_nameLabel.TabIndex = 150;
-            book_nameLabel.Text = "Title:";
             // 
             // book_nameTextBox
             // 
@@ -336,17 +350,6 @@
             this.book_nameTextBox.Size = new System.Drawing.Size(351, 26);
             this.book_nameTextBox.TabIndex = 151;
             // 
-            // book_authorLabel
-            // 
-            book_authorLabel.AutoSize = true;
-            book_authorLabel.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            book_authorLabel.ForeColor = System.Drawing.Color.White;
-            book_authorLabel.Location = new System.Drawing.Point(12, 172);
-            book_authorLabel.Name = "book_authorLabel";
-            book_authorLabel.Size = new System.Drawing.Size(85, 26);
-            book_authorLabel.TabIndex = 152;
-            book_authorLabel.Text = "Author:";
-            // 
             // book_authorTextBox
             // 
             this.book_authorTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
@@ -357,17 +360,6 @@
             this.book_authorTextBox.Name = "book_authorTextBox";
             this.book_authorTextBox.Size = new System.Drawing.Size(351, 26);
             this.book_authorTextBox.TabIndex = 153;
-            // 
-            // book_editionLabel
-            // 
-            book_editionLabel.AutoSize = true;
-            book_editionLabel.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            book_editionLabel.ForeColor = System.Drawing.Color.White;
-            book_editionLabel.Location = new System.Drawing.Point(12, 206);
-            book_editionLabel.Name = "book_editionLabel";
-            book_editionLabel.Size = new System.Drawing.Size(85, 26);
-            book_editionLabel.TabIndex = 154;
-            book_editionLabel.Text = "Edition:";
             // 
             // book_editionTextBox
             // 
@@ -380,17 +372,6 @@
             this.book_editionTextBox.Size = new System.Drawing.Size(47, 26);
             this.book_editionTextBox.TabIndex = 155;
             // 
-            // book_priceLabel
-            // 
-            book_priceLabel.AutoSize = true;
-            book_priceLabel.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            book_priceLabel.ForeColor = System.Drawing.Color.White;
-            book_priceLabel.Location = new System.Drawing.Point(12, 240);
-            book_priceLabel.Name = "book_priceLabel";
-            book_priceLabel.Size = new System.Drawing.Size(68, 26);
-            book_priceLabel.TabIndex = 156;
-            book_priceLabel.Text = "Price:";
-            // 
             // book_priceTextBox
             // 
             this.book_priceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
@@ -402,17 +383,6 @@
             this.book_priceTextBox.Size = new System.Drawing.Size(64, 26);
             this.book_priceTextBox.TabIndex = 157;
             // 
-            // book_pagesLabel
-            // 
-            book_pagesLabel.AutoSize = true;
-            book_pagesLabel.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            book_pagesLabel.ForeColor = System.Drawing.Color.White;
-            book_pagesLabel.Location = new System.Drawing.Point(13, 274);
-            book_pagesLabel.Name = "book_pagesLabel";
-            book_pagesLabel.Size = new System.Drawing.Size(80, 26);
-            book_pagesLabel.TabIndex = 158;
-            book_pagesLabel.Text = "Pages:";
-            // 
             // book_pagesTextBox
             // 
             this.book_pagesTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
@@ -423,6 +393,32 @@
             this.book_pagesTextBox.Name = "book_pagesTextBox";
             this.book_pagesTextBox.Size = new System.Drawing.Size(64, 26);
             this.book_pagesTextBox.TabIndex = 159;
+            // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 30;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.Black;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "x";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Raleway", 20F);
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.bunifuThinButton21.IdleBorderThickness = 2;
+            this.bunifuThinButton21.IdleCornerRadius = 30;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Gray;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(470, -3);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(26, 32);
+            this.bunifuThinButton21.TabIndex = 166;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // bunifuThinButton23
             // 
@@ -476,31 +472,38 @@
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
-            // bunifuThinButton21
+            // pictureBox3
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 30;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.Black;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "x";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Raleway", 20F);
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.bunifuThinButton21.IdleBorderThickness = 2;
-            this.bunifuThinButton21.IdleCornerRadius = 30;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Gray;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(470, -3);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(26, 32);
-            this.bunifuThinButton21.TabIndex = 166;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+            this.pictureBox3.BackgroundImage = global::LibraryMngmt.Properties.Resources.newstudentpink;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(17, 327);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(33, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 163;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::LibraryMngmt.Properties.Resources.returnbookpink;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(17, 67);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 162;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::LibraryMngmt.Properties.Resources.returnbookpink;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(104, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // borrow
             // 
@@ -542,9 +545,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lib_booksBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lib_studentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

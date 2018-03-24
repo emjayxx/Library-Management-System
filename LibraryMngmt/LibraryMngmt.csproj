@@ -123,6 +123,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="returnbook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +172,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="returnbook.resx">
       <DependentUpon>returnbook.cs</DependentUpon>
@@ -200,65 +206,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\about.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\books3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\forgotpw.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\issuebook.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\issuebookpink.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\newbook.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\newbookpink.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\newstudent.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\newstudentpink.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\records.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\returnbook.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\returnbookpink.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\studpink.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\studpink1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\searchpink.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pwpink.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="lib-db.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\addbookpink1.png" />
-    <None Include="Resources\addstudentpink1.png" />
+    <None Include="Resources\addbookpink2.png" />
     <None Include="Resources\addstudentpink.png" />
-    <None Include="Resources\addbookpink.png" />
-    <None Include="Resources\profile.png" />
+    <None Include="Resources\searchpink.png" />
     <None Include="Resources\signoutpink.png" />
-    <None Include="Resources\refreshpink.png" />
+    <None Include="Resources\returnbookpink.png" />
+    <None Include="Resources\issuebookpink.png" />
+    <None Include="Resources\newbookpink.png" />
+    <None Include="Resources\newstudentpink1.png" />
+    <None Include="Resources\books31.png" />
+    <None Include="Resources\pwpink.png" />
+    <None Include="Resources\newstudentpink.png" />
+    <None Include="Resources\profile.png" />
     <None Include="Resources\deletepink.png" />
+    <None Include="Resources\refreshpink.png" />
+    <None Include="Resources\addbookpink1.png" />
+    <None Include="Resources\books3.png" />
+    <None Include="Resources\addbookpink.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

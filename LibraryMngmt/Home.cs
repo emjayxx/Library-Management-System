@@ -114,7 +114,7 @@ namespace LibraryMngmt
         private void button5_Click(object sender, EventArgs e)
         {
             searchbox.Show();
-            button5.Enabled = true;
+            //button5.Enabled = true;
         }
 
         
@@ -299,6 +299,149 @@ namespace LibraryMngmt
             this.Hide();
             aboutus.ShowDialog();
             this.Close();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            New_Student newstd = new New_Student();
+            this.Hide();
+            newstd.ShowDialog();
+            this.Close();
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            NewBook newbk = new NewBook();
+            this.Hide();
+            newbk.ShowDialog();
+            this.Close();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            dt = new DataTable();
+            string sql = "SELECT * FROM `lib-books`";
+            OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
+            da.Fill(dt);
+            bunifuCustomDataGrid1.DataSource = dt;
+            bunifuCustomDataGrid1.Sort(bunifuCustomDataGrid1.Columns[0], ListSortDirection.Ascending);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            String booktitle = this.bunifuCustomDataGrid1.CurrentRow.Cells[1].Value.ToString();
+
+            DialogResult diagres = MessageBox.Show("Delete the Book: " + booktitle + "?", "Confirm?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+
+            if (diagres == DialogResult.Yes)
+            {
+                dt = new DataTable();
+                string sql = "DELETE FROM `lib-books` WHERE book_name = '" + booktitle + "'";
+                OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
+                da.Fill(dt);
+                bunifuCustomDataGrid1.DataSource = dt;
+
+                string fresh = "SELECT * FROM `lib-books`";
+                OleDbDataAdapter freshie = new OleDbDataAdapter(fresh, conn);
+                freshie.Fill(dt);
+                bunifuCustomDataGrid1.DataSource = fresh;
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            dt = new DataTable();
+            string sql = "SELECT * FROM `lib-books` WHERE book_name LIKE '%" + searchbox.Text.ToString() + "%' OR book_author LIKE '%" + searchbox.Text.ToString() + "%' OR book_status LIKE '" + searchbox.Text.ToString() + "'";
+            OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
+            da.Fill(dt);
+            bunifuCustomDataGrid1.DataSource = dt;
+        }
+
+        private void bunifuCustomDataGrid3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String borrow_id = this.bunifuCustomDataGrid1.CurrentRow.Cells[7].Value.ToString();
+            conn.Open();
+            using (OleDbCommand Command = new OleDbCommand("SELECT * FROM `lib-students` WHERE stud_id = " + borrow_id + "", conn))
+            {
+                OleDbDataReader DB_Reader = Command.ExecuteReader();
+
+                if (DB_Reader.Read())
+                {
+                    studentnamelabel.Text = DB_Reader["stud_name"].ToString();
+                    conn.Close();
+
+                }
+                else
+                {
+                    studentnamelabel.Text = "None";
+                    conn.Close();
+                }
+
+            }
+        }
+
+        private void book_nameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void studentnamelabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            dt = new DataTable();
+            string sql = "SELECT * FROM `lib-students`";
+            OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
+            da.Fill(dt);
+            bunifuCustomDataGrid2.DataSource = dt;
+            bunifuCustomDataGrid2.Sort(bunifuCustomDataGrid2.Columns[0], ListSortDirection.Ascending);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            String stuname = this.bunifuCustomDataGrid2.CurrentRow.Cells[1].Value.ToString();
+
+            DialogResult diagres = MessageBox.Show("Delete Student: " + stuname + "?", "Confirm?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+
+            if (diagres == DialogResult.Yes)
+            {
+                string sql = "DELETE FROM `lib-students` WHERE stud_name = '" + stuname + "'";
+                OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
+                da.Fill(dt);
+                bunifuCustomDataGrid2.DataSource = dt;
+
+                string fresh = "SELECT * FROM `lib-students`";
+                OleDbDataAdapter freshie = new OleDbDataAdapter(fresh, conn);
+                freshie.Fill(dt);
+                bunifuCustomDataGrid2.DataSource = fresh;
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            dt = new DataTable();
+            string sql = "SELECT * FROM `lib-students` WHERE stud_name LIKE '%" + textBox1.Text.ToString() + "%' OR stud_id LIKE '%" + textBox1.Text.ToString() + "%' OR stud_course LIKE '" + textBox1.Text.ToString() + "' OR stud_yrlevel LIKE '" + textBox1.Text.ToString() + "'";
+            OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
+            da.Fill(dt);
+            bunifuCustomDataGrid2.DataSource = dt;
+        }
+
+        private void bunifuCustomDataGrid2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
