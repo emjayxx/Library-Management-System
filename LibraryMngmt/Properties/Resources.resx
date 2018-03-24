@@ -118,11 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="29527583_2090749600941217_986682342_o" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\29527583_2090749600941217_986682342_o.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="addbookpink1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addbookpink1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="issuebookpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\issuebookpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="searchpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\searchpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jp.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newstudentpink2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newstudentpink2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="returnbookpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\returnbookpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,8 +148,8 @@
   <data name="refreshpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refreshpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="addbookpink1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\addbookpink1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="29404764_2090752397607604_1659663291_o" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\29404764_2090752397607604_1659663291_o.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="newstudentpink1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newstudentpink1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,6 +166,12 @@
   <data name="addbookpink2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addbookpink2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="29513349_2090752540940923_1181255927_o" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\29513349_2090752540940923_1181255927_o.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="29404764_2090752397607604_1659663291_o1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\29404764_2090752397607604_1659663291_o1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="books3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\books3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,10 +184,16 @@
   <data name="newbookpink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newbookpink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Danica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Danica.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="newstudentpink2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\newstudentpink2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Chel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="29513963_2090752617607582_2044797386_o" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\29513963_2090752617607582_2044797386_o.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
