@@ -343,10 +343,13 @@ namespace LibraryMngmt
             String booktitle = this.bunifuCustomDataGrid1.CurrentRow.Cells[1].Value.ToString();
             String borrower = this.bunifuCustomDataGrid1.CurrentRow.Cells[7].Value.ToString();
 
+
             DialogResult diagres = MessageBox.Show("Delete the Book: " + booktitle + "?", "Confirm?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
             //conn.Open();
             if (diagres == DialogResult.Yes)
             {
+
+
                     dt = new DataTable();
                     string sql = "DELETE FROM `lib-books` WHERE book_name = '" + booktitle + "'";
                     OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
@@ -364,10 +367,11 @@ namespace LibraryMngmt
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(searchbox.Text, @"^[\sa-zA-Z0-9]*$")) return;
-
-            searchbox.Text = String.Empty;
-            MessageBox.Show("Special characters are not allowed.");
+            if (!Regex.IsMatch(searchbox.Text, @"^[\sa-zA-Z0-9]*$"))
+            {
+                searchbox.Text = String.Empty;
+                MessageBox.Show("Special characters are not allowed.");
+            }
 
             dt = new DataTable();
             string sql = "SELECT * FROM `lib-books` WHERE book_name LIKE '%" + searchbox.Text.ToString() + "%' OR book_author LIKE '%" + searchbox.Text.ToString() + "%' OR book_status LIKE '" + searchbox.Text.ToString() + "'";
@@ -441,10 +445,11 @@ namespace LibraryMngmt
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(textBox1.Text, @"^[\sa-zA-Z0-9]*$")) return;
-
-            textBox1.Text = String.Empty;
-            MessageBox.Show("Special characters are not allowed.");
+            if (!Regex.IsMatch(textBox1.Text, @"^[\sa-zA-Z0-9]*$"))
+            {
+                textBox1.Text = String.Empty;
+                MessageBox.Show("Special characters are not allowed.");
+            }
 
             dt = new DataTable();
             string sql = "SELECT * FROM `lib-students` WHERE stud_name LIKE '%" + textBox1.Text.ToString() + "%' OR stud_id LIKE '%" + textBox1.Text.ToString() + "%' OR stud_course LIKE '" + textBox1.Text.ToString() + "' OR stud_yrlevel LIKE '" + textBox1.Text.ToString() + "'";
