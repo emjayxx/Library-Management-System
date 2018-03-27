@@ -112,10 +112,11 @@ namespace LibraryMngmt
 
         private void newpw_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(newpw.Text, @"^[\sa-zA-Z0-9]*$")) return;
-
-            newpw.Text = String.Empty;
-            MessageBox.Show("Special characters are not allowed.");
+            if (!Regex.IsMatch(newpw.Text, @"^[\sa-zA-Z0-9]*$"))
+            {
+                newpw.Text = String.Empty;
+                MessageBox.Show("Special characters are not allowed.");
+            }
 
             if (newpw.TextLength > 7)
             {
@@ -133,10 +134,11 @@ namespace LibraryMngmt
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(textBox1.Text, @"^[\sa-zA-Z0-9]*$")) return;
-
-            textBox1.Text = String.Empty;
-            MessageBox.Show("Special characters are not allowed.");
+            if (!Regex.IsMatch(textBox1.Text, @"^[\sa-zA-Z0-9]*$"))
+            {
+                textBox1.Text = String.Empty;
+                MessageBox.Show("Special characters are not allowed.");
+            }
 
             if (newpw.Text != null && textBox1.Text != null)
             {
@@ -165,10 +167,11 @@ namespace LibraryMngmt
 
         private void usersearch_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(usersearch.Text, @"^[\sa-zA-Z0-9]*$")) return;
-
-            usersearch.Text = String.Empty;
-            MessageBox.Show("Special characters are not allowed.");
+            if (!Regex.IsMatch(usersearch.Text, @"^[\sa-zA-Z0-9]*$"))
+            {
+                usersearch.Text = String.Empty;
+                MessageBox.Show("Special characters are not allowed.");
+            }
         }
 
         private void name_TextChanged(object sender, EventArgs e)

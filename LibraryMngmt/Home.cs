@@ -343,13 +343,12 @@ namespace LibraryMngmt
             String booktitle = this.bunifuCustomDataGrid1.CurrentRow.Cells[1].Value.ToString();
             String borrower = this.bunifuCustomDataGrid1.CurrentRow.Cells[7].Value.ToString();
 
-
-            DialogResult diagres = MessageBox.Show("Delete the Book: " + booktitle + "?", "Confirm?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
-            //conn.Open();
-            if (diagres == DialogResult.Yes)
+            if (borrower == "0")
             {
-
-
+                DialogResult diagres = MessageBox.Show("Delete the Book: " + booktitle + "?", "Confirm?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                //conn.Open();
+                if (diagres == DialogResult.Yes)
+                {
                     dt = new DataTable();
                     string sql = "DELETE FROM `lib-books` WHERE book_name = '" + booktitle + "'";
                     OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
@@ -360,8 +359,24 @@ namespace LibraryMngmt
                     OleDbDataAdapter freshie = new OleDbDataAdapter(fresh, conn);
                     freshie.Fill(dt);
                     bunifuCustomDataGrid1.DataSource = fresh;
-               
-                conn.Close();
+
+                    conn.Close();
+                }
+            } else
+            {
+                conn.Open();
+                using (OleDbCommand Command = new OleDbCommand("SELECT * FROM `lib-students` WHERE stud_id = " + borrower + "", conn))
+                {
+                    OleDbDataReader DB_Reader = Command.ExecuteReader();
+
+                    if (DB_Reader.Read())
+                    {
+                        String namename = DB_Reader["stud_name"].ToString();
+                        MessageBox.Show("You can't delete this in the inventory. This book is currently borrowed by: " + namename);
+
+                        conn.Close();
+                    }
+                }
             }
         }
 
@@ -426,21 +441,40 @@ namespace LibraryMngmt
         private void button13_Click(object sender, EventArgs e)
         {
             String stuname = this.bunifuCustomDataGrid2.CurrentRow.Cells[1].Value.ToString();
-
-            DialogResult diagres = MessageBox.Show("Delete Student: " + stuname + "?", "Confirm?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
-
-            if (diagres == DialogResult.Yes)
+            String studid = this.bunifuCustomDataGrid2.CurrentRow.Cells[0].Value.ToString();
+            
+            conn.Open();
+            using (OleDbCommand Command = new OleDbCommand("SELECT * FROM `lib-books` WHERE book_borrower = " + studid + "", conn))
             {
-                string sql = "DELETE FROM `lib-students` WHERE stud_name = '" + stuname + "'";
-                OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
-                da.Fill(dt);
-                bunifuCustomDataGrid2.DataSource = dt;
+                OleDbDataReader DB_Reader = Command.ExecuteReader();
 
-                string fresh = "SELECT * FROM `lib-students`";
-                OleDbDataAdapter freshie = new OleDbDataAdapter(fresh, conn);
-                freshie.Fill(dt);
-                bunifuCustomDataGrid2.DataSource = fresh;
+                if (DB_Reader.Read())
+                {
+                    String bookbook = DB_Reader["book_name"].ToString();
+                    MessageBox.Show("Cannot delete this student. This student has borrowed a book: "+bookbook);
+
+                } else
+                {
+                    DialogResult diagres = MessageBox.Show("Delete Student: " + stuname + "?", "Confirm?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+
+                    if (diagres == DialogResult.Yes)
+                    {
+                        string sql = "DELETE FROM `lib-students` WHERE stud_name = '" + stuname + "'";
+                        OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
+                        da.Fill(dt);
+                        bunifuCustomDataGrid2.DataSource = dt;
+
+                        string fresh = "SELECT * FROM `lib-students`";
+                        OleDbDataAdapter freshie = new OleDbDataAdapter(fresh, conn);
+                        freshie.Fill(dt);
+                        bunifuCustomDataGrid2.DataSource = fresh;
+                    }
+                }
+                conn.Close();
             }
+
+
+            
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)

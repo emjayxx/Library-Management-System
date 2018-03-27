@@ -73,10 +73,11 @@ namespace LibraryMngmt
 
         private void confirmpw_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(confirmpw.Text, @"^[\sa-zA-Z0-9]*$")) return;
-
-            confirmpw.Text = String.Empty;
-            MessageBox.Show("Special characters are not allowed.");
+            if (!Regex.IsMatch(confirmpw.Text, @"^[\sa-zA-Z0-9]*$"))
+            {
+                confirmpw.Text = String.Empty;
+                MessageBox.Show("Special characters are not allowed.");
+            }
 
             if (pword.Text != null && confirmpw.Text != null)
             {
@@ -105,10 +106,11 @@ namespace LibraryMngmt
 
         private void pword_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(pword.Text, @"^[\sa-zA-Z0-9]*$")) return;
-
-            pword.Text = String.Empty;
-            MessageBox.Show("Special characters are not allowed.");
+            if (!Regex.IsMatch(pword.Text, @"^[\sa-zA-Z0-9]*$"))
+            {
+                pword.Text = String.Empty;
+                MessageBox.Show("Special characters are not allowed.");
+            }
 
             if (pword.TextLength < 8)
             {
@@ -125,10 +127,11 @@ namespace LibraryMngmt
 
         private void uname_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(uname.Text, @"^[a-zA-Z0-9]*$")) return;
-
-            uname.Text = String.Empty;
-            MessageBox.Show("Special characters are not allowed.");
+            if (!Regex.IsMatch(uname.Text, @"^[\sa-zA-Z0-9]*$"))
+            {
+                uname.Text = String.Empty;
+                MessageBox.Show("Special characters are not allowed.");
+            }
 
             if (uname.Text != null)
             {
