@@ -82,7 +82,7 @@ namespace LibraryMngmt
             if (pword.Text != null && confirmpw.Text != null)
             {
 
-                if (pword.Text == confirmpw.Text)
+                if (pword.Text == confirmpw.Text && pword.TextLength > 7)
                 {
                     this.Refresh();
                     confirmpwlabel.Text = "Password confirmed.";
